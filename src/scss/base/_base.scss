@@ -39,7 +39,15 @@ input:-webkit-autofill,
 	--secondary1: #b2bdc7;
 	--secondary2: #dde2e6;
 	--secondary3: #f6f9fb;
-	-promo-title: #fff;
+	
+	--promo-title: #fff;
+	--btn-primary-text:  #fff;
+    --btn-primary:#3583c7;
+	--btn-primary-hover: #236dad;
+
+	--btn-dark: #1b3e54;
+	--btn-dark-text:  #fff;
+	--btn-dark-hover: #236dad;
 }
 
 *, *:after, *:before {

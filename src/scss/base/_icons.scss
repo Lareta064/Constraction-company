@@ -1,7 +1,17 @@
-svg{display: inline-block;}
+@use '_var' as *;
+svg{display: inline-block; transition: .3s; }
 .svg-right{
-	
-	width: 12px;
-	height: 10px;
-	color: blue;
+	width: remy(22);
+	height: remy(22);
+	color: white;
+}
+.svg-email{
+	width: remy(22);
+	height: remy(22);
+	color: white;
+}
+.svg-round-check{
+	width: remy(20);
+	height: remy(20);
+	color: white;
 }

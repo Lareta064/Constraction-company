@@ -1,0 +1,53 @@
+@use '_var' as *;
+.btn-primary, .btn-outline, .btn-dark{
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	column-gap:remy(10);
+	height: remy(52);
+	border:0;
+	white-space: nowrap;
+	font-family: var(--font-family);
+	color: var(--btn-primary-text);
+	background: var(--btn-primary);
+	font-weight: 500;
+	font-size: remy(16);
+	border-radius: remy(10);
+	padding-inline: remy(26);
+	transition: .3s;
+	svg{color: var(--btn-primary-text);}
+	&.disabled, &[disabled]{
+		opacity: 0.4;
+		cursor: default;
+		pointer-events: none;
+	}
+}
+.btn-primary:hover{
+	background: var(--btn-primary-hover);
+	svg.svg-right{transform: translateX(5px);}
+}
+.btn-outline{
+	border: 1px solid var(--btn-primary);
+    color: var(--btn-primary);
+	background:#fff;
+	svg{color: var(--btn-primary);}
+	&:hover{
+		color: var(--btn-primary-text);
+		background: var(--btn-primary);
+		svg{color: var(--btn-primary-text);}
+	}
+}
+.btn-primary.w-100{
+	width: 100%!important;
+}
+.btn-dark{
+	background: var(--btn-dark);
+	color: var(--btn-dark-text);
+	svg{color: white}
+	&:hover{
+		background: var(--btn-dark-hover);
+		svg{color: white}
+	}
+}
