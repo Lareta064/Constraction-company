@@ -1,8 +1,6 @@
 @use '../base/_var' as *;
 /*===== WHY US =====*/
 .benefit-card{
-	background-color: var(--white);
-	border-radius: remy(12);
     padding: remy(40);
 	.circle-icon{margin-bottom: remy(20);}
 	.bold-20{margin-bottom: remy(10);}

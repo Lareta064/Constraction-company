@@ -1,11 +1,11 @@
 @use '_var' as *;
-svg{display: inline-block; transition: .3s; }
+svg{display: inline-block; transition: .3s;flex-shrink:0 }
 .svg-right{
 	width: remy(22);
 	height: remy(22);
 	color: white;
 }
-.svg-email{
+.svg-email, .svg-phone{
 	width: remy(22);
 	height: remy(22);
 	color: white;
@@ -14,4 +14,9 @@ svg{display: inline-block; transition: .3s; }
 	width: remy(20);
 	height: remy(20);
 	color: white;
+}
+.svg-carret-down{
+	width: remy(18);
+	height: remy(18);
+	color: var(--accent2);
 }

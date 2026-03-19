@@ -1,6 +1,7 @@
 @use '_var' as *;
 .btn-primary, .btn-outline, .btn-dark{
 	display: flex;
+	flex-shrink: 0;
 	width: fit-content;
 	align-items: center;
 	justify-content: center;

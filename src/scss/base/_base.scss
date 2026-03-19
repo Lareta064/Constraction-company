@@ -24,7 +24,7 @@ input:-webkit-autofill,
 }
 :root{
 	
-	
+
 	--accent1: #3583c7;
 	--accent2: #236dad;
 	--accent3: #1b5054;
@@ -52,7 +52,7 @@ input:-webkit-autofill,
 	--btn-dark-text:  #fff;
 	--btn-dark-hover: #236dad;
 
-	
+	--white-bg-items: white;
 }
 
 *, *:after, *:before {
@@ -109,6 +109,7 @@ h4,
 p {
 	padding: 0;
 	margin: 0;
+	
 }
 
 img {
@@ -172,6 +173,14 @@ input::placeholder, textarea::placeholder{
 	&>*{width: 100%;}
 }
 /*vendore*/
+.icon-text{
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	column-gap:remy(6);
+}
+.two-columns,
+.three-columns,
 .four-columns{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -180,4 +189,10 @@ input::placeholder, textarea::placeholder{
 	  grid-template-columns: 1fr;
 	  gap: remy(20);
 	}
+}
+.three-columns{
+	grid-template-columns: repeat(3, 1fr);
+}
+.two-columns{
+	grid-template-columns: repeat(2, 1fr);
 }
