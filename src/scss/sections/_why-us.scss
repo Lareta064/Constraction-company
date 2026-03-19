@@ -1,0 +1,25 @@
+@use '../base/_var' as *;
+/*===== WHY US =====*/
+.benefit-card{
+	background-color: var(--white);
+	border-radius: remy(12);
+    padding: remy(40);
+	.circle-icon{margin-bottom: remy(20);}
+	.bold-20{margin-bottom: remy(10);}
+	
+	@media (max-width: 1439px) {
+	  padding: remy(20);
+	}
+	
+	@media (max-width: 767px) {
+		.circle-icon{margin-bottom: remy(10);}
+	}
+}
+.why-us-cards.four-columns{
+	@media (max-width: 1279px) {
+	 grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 767px) {
+	 grid-template-columns: 1fr;
+	}
+}

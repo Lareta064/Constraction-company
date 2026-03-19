@@ -1,0 +1,35 @@
+extends ../layouts/layout.pug
+
+block content
+	section.why-us
+		.container.gap-40
+			.header-block
+				h2.h2 Почему выбирают нас
+			
+			.columns-text.gap-40.medi-18
+				p Не важно что нужно заасфальтировать дорогу, производственную территорию, парковку,склад, тротуар или арендовать, качество определяется вниманием к деталям и общим подходом к делу. Выбирая нашу компанию, вы можете быть уверены, что мы спланируем всё до мелочей и реализуем любой проект точно в срок и в рамках заданного бюджета.
+				p Компания «Строительное управление — 7» станет вашим н   адёжным партнёром, и вы сами сможете оценить профессионализм и высокое качество нашей работы. Звоните +7 927 133-43-44.
+			
+			.why-us-cards.four-columns
+				.benefit-card
+					.circle-icon
+						img(src='./img/icons/benefit1.svg'  width='36' height='36' loading='lazy' alt='img')
+					.bold-20 Стабильная компания
+					.demi-16 Более 15 лет опыта
+				.benefit-card
+					.circle-icon
+						img(src='./img/icons/benefit2.svg'  width='36' height='36' loading='lazy' alt='img')
+					.bold-20 Реализуем проект<br>под ключ
+					.demi-16 Консультация, закупка<br>материала, строительство
+				.benefit-card
+					.circle-icon
+						img(src='./img/icons/benefit3.svg'  width='36' height='36' loading='lazy' alt='img')
+					.bold-20 Постоянные бригады и&nbsp;сотрудники
+					.demi-16 Гарантия качества и&nbsp;профессионализма для&nbsp;заказчика
+				.benefit-card
+					.circle-icon
+						img(src='./img/icons/benefit4.svg'  width='36' height='36' loading='lazy' alt='img')
+					.bold-20 Сдано более<br>380&nbsp;объектов
+					.demi-16 Смотрите наши объекты на&nbsp;сайте
+block variables
+	-var title = "Почему выбирают нас";
