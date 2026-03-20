@@ -20,9 +20,17 @@
 .font-18,.medi-18, .bold-18 {font-size: remy(18);font-weight: 400;line-height: 1.4;}
 .font-16,.medi-16, .bold-16 {font-size: remy(16);font-weight: 400;line-height: 1.4;}
 .font-14,.medi-14, .bold-14 {font-size: remy(14);font-weight: 400;line-height: 1.4;}
-
-.medi-14, .medi-16,.medi-18, .medi-20, .medi-24,.medi-28{font-weight: 500;}
+.medi-12, .font-12{font-size: remy(12);font-weight: 400;line-height: 1.4;color: var(--secondary1);}
+.medi-12, .medi-14, .medi-16,.medi-18, .medi-20, .medi-24,.medi-28{font-weight: 500;}
 .bold-14, .bold-16,.bold-18, .bold-20, .bold-24,.bold-28{font-weight: 700;}
+.link-underline{
+	display: inline;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	transition: .3s; 
+}
+
+
 .header-block{
 	display: flex;
 	align-items: center;
