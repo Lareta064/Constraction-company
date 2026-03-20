@@ -22,4 +22,36 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 		});
 	}
+	/*FANCYBOX */
+	Fancybox.bind("[data-fancybox]", {
+	Thumbs: false,
+
+	Toolbar: {
+		display: {
+		left: [],
+		middle: [],
+		right: ["close"],
+		},
+	},
+
+	on: {
+		ready: (fancybox) => updateCounter(fancybox),
+		"Carousel.change": (fancybox) => updateCounter(fancybox),
+	},
+	});
+
+	function updateCounter(fancybox) {
+	let counter = fancybox.container.querySelector(".my-fancybox-counter");
+
+	if (!counter) {
+		counter = document.createElement("div");
+		counter.className = "my-fancybox-counter";
+		fancybox.container.appendChild(counter);
+	}
+
+	const index = fancybox.getSlide()?.index ?? 0;
+	const total = fancybox.Carousel?.slides?.length ?? 0;
+
+	counter.textContent = `${index + 1} / ${total}`;
+	}
 })
