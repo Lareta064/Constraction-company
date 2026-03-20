@@ -22,6 +22,64 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 		});
 	}
+	let documentsReview = new Swiper(".review-documents", {
+		slidesPerView: 'auto',
+		speed: 1000,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".review-doc-next",
+			prevEl: ".review-doc-prev",
+		},
+		pagination: {
+        el: ".review-documents .swiper-pagination",
+      },
+	  breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+           slidesPerView: 3,
+          spaceBetween:20,
+        },
+		1200: {
+           slidesPerView: 4,
+          spaceBetween:20,
+        },
+		1440: {
+           slidesPerView: 4,
+           spaceBetween:30,
+        },
+      },
+    });
+	let partnersReview = new Swiper(".review-partners", {
+		slidesPerView: 'auto',
+		speed: 1000,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".review-partners-next",
+			prevEl: ".review-partners-prev",
+		},
+		pagination: {
+        el: ".review-partners .swiper-pagination",
+      },
+	  breakpoints: {
+       
+        1024: {
+          
+          spaceBetween:20,
+        },
+		
+		1440: {
+          
+           spaceBetween:30,
+        },
+      },
+    });
 	/*FANCYBOX */
 	Fancybox.bind("[data-fancybox]", {
 	Thumbs: false,

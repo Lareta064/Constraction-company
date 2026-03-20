@@ -1,0 +1,55 @@
+@use '_var' as *;
+/*==== SWIPER STYLES===*/
+.swiper-button-prev,.swiper-button-next{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius:remy(10);
+	width: remy(52);
+	height: remy(52);
+	background: var(--secondary2);
+	position: relative;
+	inset:0;
+	margin: 0;
+	&:after{font-size: remy(18); color: var(--primary1)}
+}
+.has-swiper .swiper{
+	padding-bottom: 50px;
+	@media (max-width: 767px) {
+	padding-bottom: 40px;
+	}
+}
+.swiper-pagination{
+	.swiper-pagination-bullet{
+		width: remy(10);
+		height: remy(10);
+		background: var(--secondary1);
+		opacity: 1;
+		border-radius: remy(2);
+		transition: .3s; 
+	}
+	.swiper-pagination-bullet-active{
+		width: remy(40);
+		background: var(--accent1);
+	}
+}
+.accent-bg .swiper-button-prev,.accent-bg  .swiper-button-next{
+	background: var(--secondary3);
+}
+.accent-bg .swiper-pagination{
+	.swiper-pagination-bullet{background: var(--secondary3);}
+	
+	.swiper-pagination-bullet-active{
+		background: var(--primary);
+	}
+}
+.swiper-navigation{
+	display: flex;
+	column-gap: remy(10);
+	align-items: center;
+}
+.header-block .swiper-navigation{
+	@media (max-width: 767px) {
+	  display: none;
+	}
+}

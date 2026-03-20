@@ -47,6 +47,15 @@
 	 padding-block: remy(20);
 	}
 }
+.pblock-140.has-swiper{
+	padding-bottom: 90px;
+	@media (max-width: 1439px) {
+	  padding-block: remy(50);
+	}
+	@media (max-width: 767px) {
+	 padding-block: remy(50);
+	}
+}
 .header-block{
 	display: flex;
 	align-items: center;
@@ -163,4 +172,4 @@
 	 .primary-section{ padding-inline:remy(20);}
 	}
 }
-.accent-section{background: var(--accent1);}
+.accent-section, .accent-bg{background: var(--accent1);.h2{color: var(--white);}}

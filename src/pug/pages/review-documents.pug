@@ -1,0 +1,36 @@
+extends ../layouts/layout.pug
+
+block content
+	section.review.accent-bg.pblock-140.has-swiper
+		.container.gap-40
+			.header-block
+				h2.h2 Отзывы компаний
+				.swiper-navigation
+					button.swiper-button-prev.review-doc-prev
+					button.swiper-button-next.review-doc-next
+						
+			.special-wrapper-mobile
+				.review-documents.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc1.webp', srcset='./img/review-doc1@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc2.webp', srcset='./img/review-doc2@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc3.webp', srcset='./img/review-doc3@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc4.webp', srcset='./img/review-doc4@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc1.webp', srcset='./img/review-doc1@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+						.swiper-slide
+							.review-card
+								img(src='./img/review-doc2.webp', srcset='./img/review-doc2@2x.webp 2x' width='351' height='497' loading='lazy' alt='img')
+					
+					.swiper-pagination
+block variables
+	-var title = "Отзывы";

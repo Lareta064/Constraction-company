@@ -1,4 +1,5 @@
 @use '_var' as *;
+/*==== SVG SPRITE===*/
 svg{display: inline-block; transition: .3s;flex-shrink:0 }
 .svg-right{
 	width: remy(22);
@@ -24,4 +25,10 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	width: remy(42);
 	height: remy(42);
 	color: var(--white);
+}
+.svg-carret-left,
+.svg-carret-right{
+	width: remy(20);
+	height: remy(20);
+	color: var(--primary1);
 }
