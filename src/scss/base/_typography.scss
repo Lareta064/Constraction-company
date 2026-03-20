@@ -29,13 +29,61 @@
 	text-decoration-skip-ink: none;
 	transition: .3s; 
 }
-
-
+.pblock-140{
+	padding-block: remy(140);
+	@media (max-width: 1439px) {
+	  padding-block: remy(100);
+	}
+	@media (max-width: 767px) {
+	 padding-block: remy(80);
+	}
+}
+.pblock-120{
+	padding-block: remy(120);
+	@media (max-width: 1439px) {
+	  padding-block: remy(80);
+	}
+	@media (max-width: 767px) {
+	 padding-block: remy(20);
+	}
+}
 .header-block{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	column-gap: remy(20);
+}
+
+.d-flex{
+	display: flex;
+	column-gap: remy(40);
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  row-gap:remy(20);
+	}
+}
+.icon-text{
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	column-gap:remy(6);
+}
+.two-columns,
+.three-columns,
+.four-columns{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: remy(30);
+	@media (max-width: 767px) {
+	  grid-template-columns: 1fr;
+	  gap: remy(20);
+	}
+}
+.three-columns{
+	grid-template-columns: repeat(3, 1fr);
+}
+.two-columns{
+	grid-template-columns: repeat(2, 1fr);
 }
 .gap-40{gap: remy(40);}
 .rows-gap-10,
@@ -50,9 +98,11 @@
 	row-gap: remy(10);
 	}
 }
-.no-wrap {
-	white-space: nowrap;
-}
+.no-wrap {white-space: nowrap;}
+.txt-center{text-align: center;}
+.txt-accent{color: var(--accent2)}
+.txt-muted{color: var(--secondary);}
+.h-white{color: var(--header-white);}
 
 .columns-text{
 	display: grid;
@@ -65,6 +115,15 @@
      grid-template-columns: 1fr;
    }
 }
+@media (max-width: 1364px) {
+  .h2{font-size: remy(40);}
+}
+@media (max-width: 1199px) {
+   .h2{font-size: remy(38);}
+}
+@media (max-width: 1023px) {
+.h2{font-size: remy(34);}
+}
 @media (max-width: 767px) {
 	.h2{font-size: remy(32);}
 	.header-block{flex-direction: column;}
@@ -74,5 +133,31 @@
 .white-card{
 	background-color: var(--white-bg-items);
 	border-radius: remy(12);
+}
+.primary-bg,.primary-section{
+	background-color: var(--primary);
+}
+.primary-section, .accent-section{
+	border-radius: remy(12);
+	padding-inline: calc((100% - remy(1240)) / 2);
+	.h2{color: var(--white);}
+	@media (max-width: 1439px) {
+	 padding-inline:remy(40);
+	}
+	@media (max-width: 1279px) {
+	 padding-inline:remy(20);
+	}
 	
 }
+.primary-section{
+	@media (max-width: 767px) {
+	  border-radius: 0;
+	}
+}
+.has-primary-section{
+	@media (max-width: 767px) {
+	 .container{padding: 0;}
+	 .primary-section{ padding-inline:remy(20);}
+	}
+}
+.accent-section{background: var(--accent1);}

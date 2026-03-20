@@ -1,26 +1,53 @@
 extends ../layouts/layout.pug
 
 block content
-	section.consultation
-		.container
-			.consultation-content.d-flex
-				.consultation-text
-					.h2 Консультация, расчёт сметы и&nbsp;материала бесплатно
-				.form-wrapper
-					form.feedback-form
-						.form-item
-							input.form-inp(type="text" placeholder="Имя" required)
-							p.medi-12 Additional text
-						.form-item.form-item-invalid
-							input.form-inp(type="text" placeholder="Телефон" required)
-							p.medi-12 Error text
-						label.form-agree
-							input(type="checkbox" name="agree_input")
-							span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
-						button.btn-primary.w-100(type="button")
-							span Текст на кнопке
-							svg.svg-round-check
-								use(href='./img/sprite.svg#svg-round-check')
-
+	main
+		section.consultation.has-primary-section
+			.container
+				.consultation-content.d-flex.pblock-140.primary-section
+					.consultation-text
+						.h2 Консультация, расчёт сметы и&nbsp;материала бесплатно
+					.form-wrapper
+						form.feedback-form
+							.form-item
+								input.form-inp(type="text" placeholder="Имя" required)
+								p.medi-12 Additional text
+							.form-item.form-item-invalid
+								input.form-inp(type="text" placeholder="Телефон" required)
+								p.medi-12 Error text
+							label.form-agree
+								.custom-label
+									input(type="checkbox" name="agree_input")
+									span.fake-checkbox
+								
+								span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+							button.btn-primary.w-100(type="button")
+								span Получить консультацию
+								svg.svg-round-check
+									use(href='./img/sprite.svg#svg-round-check')
+		section.feedback
+			.container
+				.consultation-content.d-flex.pblock-120.accent-section
+					.consultation-text
+						.h2 У Вас остались вопросы?<br>Задайте их специалисту!
+					.form-wrapper.in-accent-wrapper
+						form.feedback-form
+							.form-item
+								input.form-inp(type="text" placeholder="Имя" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Email" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Телефон" required)
+							.form-item
+								textarea.form-text(placeholder="Задайте вопрос")
+							label.form-agree
+								.custom-label
+									input(type="checkbox" name="agree_input")
+									span.fake-checkbox
+								span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+							button.btn-dark.w-100(type="button")
+								span Отправить
+								svg.svg-email
+									use(href='./img/sprite.svg#svg-email')
 block variables
 	-var title = "Консультация";

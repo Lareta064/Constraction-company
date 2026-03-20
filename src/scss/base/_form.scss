@@ -13,6 +13,7 @@
 		font-size: remy(16);
 		font-family: var(--font-family);
 		color: var(--primary);
+		background-color: var(--white);
 		&::placeholder{
 			color: var(--secondary);
 			font-family: var(--font-family);
@@ -28,7 +29,7 @@
 		}
 	}
 	textarea.form-text{
-		height: remy(100);
+		height: remy(90);
 		padding: remy(11) remy(16);
 	}
 }
@@ -37,12 +38,48 @@
 	.medi-12{color: var(--error);}
 }
 .form-wrapper{
-	width: 100%;
-	max-width: remy(479);
+	width: remy(479);
+	flex-shrink: 0;
 	form{
 		display: flex;
 		flex-direction: column;
 		gap: remy(10);
+	}
+	@media (max-width: 1199px) {
+	  width: remy(350);
+	}
+	@media (max-width: 767px) {
+	  width: 100%;
+	}
+}
+.custom-label{
+	position: relative;
+	display: flex;
+	column-gap:remy(6);
+	input[type="checkbox"]{
+		width: 0.01px;
+		height: 0.01px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+	.fake-checkbox{
+		display: inline-block;
+		flex-shrink: 0;
+		width: remy(16);
+		height: remy(16);
+		border-radius: remy(4);
+		border: 1px solid var(--secondary);
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8 1L3 6L1 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+		background-size:0;
+		background-position: center;
+		background-color: transparent;
+	}
+	input[type="checkbox"]:checked +.fake-checkbox{
+		background-size:9px 7px;
+		background-color: var(--primary);
+		
 	}
 }
 .form-agree{
@@ -53,4 +90,14 @@
 		color: var(--accent1);
 		&:hover{color: var(--secondary);}
 	}
+}
+.in-accent-wrapper .form-agree{
+	color: var(--secondary1);
+	.link-underline{
+		color: var(--white);
+		&:hover{color: var(--secondary2);}
+	}
+}
+.in-accent-wrapper {
+	.custom-label .fake-checkbox{border:1px solid var(--secondary1);}
 }

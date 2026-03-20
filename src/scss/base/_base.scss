@@ -55,7 +55,19 @@ body {
 	flex-direction: column;
 	&>*{width: 100%;}
 	header.header, footer.footer{flex-shrink:0}
-	main{flex-grow: 1;}
+	main{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		row-gap: remy(140);
+		&>*{width: 100%;}
+		@media (max-width: 1439px) {
+		  row-gap: remy(100);
+		}
+		@media (max-width: 767px) {
+		row-gap: remy(80);
+		}
+	}
 }
 a,
 a:hover {
@@ -140,32 +152,4 @@ input::placeholder, textarea::placeholder{
 	display: flex;
 	flex-direction: column;
 	&>*{width: 100%;}
-}
-/*vendore*/
-.d-flex{
-	display: flex;
-	column-gap: remy(40);
-}
-.icon-text{
-	display: flex;
-	width: fit-content;
-	align-items: center;
-	column-gap:remy(6);
-}
-.two-columns,
-.three-columns,
-.four-columns{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: remy(30);
-	@media (max-width: 767px) {
-	  grid-template-columns: 1fr;
-	  gap: remy(20);
-	}
-}
-.three-columns{
-	grid-template-columns: repeat(3, 1fr);
-}
-.two-columns{
-	grid-template-columns: repeat(2, 1fr);
 }

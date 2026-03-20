@@ -1,2 +1,19 @@
 @use '../base/_var' as *;
 /*===== CONSULTATION FORM =====*/
+.consultation-content{
+	justify-content: space-between;
+	align-items: center;
+	.consultation-text{max-width: remy(606);
+	}
+}
+.consultation.primary-section{
+	.form-wrapper{
+		padding-block: remy(26);
+	}
+}
+.accent-section{
+	@media (max-width: 767px) {
+	.h2{font-size: remy(24);}
+	}
+}
+
