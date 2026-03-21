@@ -1,0 +1,50 @@
+@use '../base/_var' as *;
+/*===== achievements =====*/
+
+.achiev-card{
+	padding: remy(40);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap:remy(20);
+	text-align: center;
+	&>*{width: 100%;}
+	.svg-round-check{
+		color:var(--accent1);
+	}
+	.flex-col{
+		row-gap:remy(4);
+		justify-content: flex-start;
+		text-align: left;
+	}
+	.achiev-card__group{
+		display: flex;
+		align-items: center;
+		column-gap: remy(10);
+		white-space: nowrap;
+
+		
+	}
+	@media (max-width: 1439px) {
+	   padding: remy(20);
+	}
+}
+.achiev-card .brand-logo{display: flex; justify-content: center;}
+.achiev-card .icon-text{justify-content: center;}
+
+.achiev-card.achiev-card--reviews{
+	flex-direction: row;
+	justify-content: space-between;
+	column-gap: remy(20);
+	.achiev-card__logo{
+		width: remy(100);
+		img{object-fit: contain;}
+		@media (max-width: 1279px) {
+		  width: remy(87);
+		}
+	}
+	@media (max-width: 767px) {
+	column-gap: remy(10);
+	}
+}

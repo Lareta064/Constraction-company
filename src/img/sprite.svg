@@ -86,5 +86,10 @@
 
 		</g>
 	</symbol>
+	<symbol id="svg-star" viewBox="0 0 30 27">
+		<g>
+ 			 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5714 0L19.0732 8.79277L29.1429 10.2115L21.8571 17.0515L23.5766 26.7143L14.5714 22.1499L5.56629 26.7143L7.28571 17.0515L0 10.2115L10.0681 8.79277L14.5714 0Z" fill="currentColor" />
+		</g>
+	</symbol>
 </svg>
 <!--  -->

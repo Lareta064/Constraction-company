@@ -32,3 +32,18 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	height: remy(20);
 	color: var(--primary1);
 }
+.svg-star{
+	width: remy(30);
+	height: remy(27);
+	color: #F9C758;
+}
+.rating-stars{
+	display: inline-flex;
+	flex-shrink: 0;
+	width: remy(100);
+	height: remy(20);
+	background-image: url('../img/stars.webp');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}

@@ -65,13 +65,18 @@
 .bor-radius{
 	border-radius: remy(12);
 }
-.d-flex{
+.d-flex, .flex-col{
 	display: flex;
 	column-gap: remy(40);
 	@media (max-width: 767px) {
 	  flex-direction: column;
 	  row-gap:remy(20);
 	}
+}
+.flex-center-y{align-items: center}
+.flex-col{
+	flex-direction: column;
+	row-gap: remy(10);
 }
 .icon-text{
 	display: flex;
