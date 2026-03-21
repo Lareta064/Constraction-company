@@ -150,7 +150,7 @@
 	.bold-24{font-size: remy(18);}
 }
 .white-card{
-	background-color: var(--white-bg-items);
+	background-color: var(--white-bg);
 	border-radius: remy(12);
 }
 .primary-bg,.primary-section{
@@ -180,3 +180,50 @@
 	}
 }
 .accent-section, .accent-bg{background: var(--accent1);.h2{color: var(--white);}}
+.custom-text{
+	h1,h2,h3,h4,h5,h6{
+		font-size: remy(18);
+		line-height: 1.4;
+		color: var(--primary);
+		font-weight: 700;
+		margin-bottom: remy(-10);
+	}
+	p{
+		font-size: remy(18);
+		line-height: 1.4;
+	}
+	ul, ol{
+		list-style-type: square;
+		margin: 0;
+		padding: 0;
+		margin-left: remy(20);
+		li::marker{
+			color: var(--accent1);
+		}
+		li{
+			h1,h2,h3,h4,h5,h6{margin-bottom: remy(10);}
+			padding-left: remy(5);
+		}
+		li+li{margin-top: remy(4);}
+	}
+	ol{
+		list-style-type: decimal;
+		li::marker{
+			color: var(--primary);
+			font-weight: 700;
+		}
+		
+	}
+	// ul li{
+	// 	position: relative;
+	// 	&:before{
+	// 		content:'';
+	// 		display: inline-block;
+	// 		width: remy(10);
+	// 		height: remy(10);
+	// 		border-radius: remy(4);
+	// 		background-color: var(--accent1);
+	// 		flex-shrink:0 ;
+	// 	}
+	// }
+}

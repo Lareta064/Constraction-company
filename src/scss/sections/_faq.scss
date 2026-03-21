@@ -1,0 +1,64 @@
+@use '../base/_var' as *;
+/*===== FAQ =====*/
+.acordion-wrapper .acordion-item +.acordion-item{margin-top: remy(10);}
+.acordion-wrapper .acordion-button{
+	display: flex;
+	padding: remy(30);
+	
+	
+	display: flex;
+	align-items: center;
+	column-gap:remy(10);
+	@media (max-width: 1199px) {
+	padding: remy(20);
+	
+	
+	}
+}
+.acordion-item{
+	border: 1px solid var(--primary);
+	border-radius: remy(12);
+	background-color: var(--white-bg);
+
+}
+.acordion-wrapper .acordion-item__title{
+	flex-grow: 1;
+}
+.acordion-wrapper  .acordion-item__icon{
+	width: remy(20);
+	height: remy(20);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	transition: .3s; 
+	svg{
+		width:remy(24);
+		height: remy(24);
+		
+	}
+}
+.acordion-wrapper  .acordion-body{
+	max-height:0;
+	overflow: hidden;
+	transition: height .3s, max-height 0.3s;
+	
+}
+.acordion-body__content{
+	padding: remy(30);
+	font-size: remy(18);
+	font-weight: 400;
+	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
+	row-gap: remy(20);
+	@media (max-width: 1199px) {
+	  padding: remy(20);
+	}
+}
+.acordion-item.acordion-item--active{
+	border: 1px solid var(--accent1);
+	.acordion-button{padding-bottom: 0;}
+	.acordion-item__title, .acordion-item__title svg{color: var(--accent1);}
+	.acordion-item__icon{transform: rotate(180deg);}
+}
