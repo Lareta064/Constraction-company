@@ -84,6 +84,7 @@
 	align-items: center;
 	column-gap:remy(6);
 }
+.grid-12,
 .two-columns,
 .three-columns,
 .four-columns{
@@ -97,6 +98,9 @@
 	  grid-template-columns: 1fr;
 	  gap: remy(20);
 	}
+}
+.grid-12{
+	grid-template-columns:1fr 2fr;
 }
 .three-columns{
 	grid-template-columns: repeat(3, 1fr);

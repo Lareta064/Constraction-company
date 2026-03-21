@@ -1,0 +1,39 @@
+extends ../layouts/layout.pug
+
+block content
+	h2 Класс .grid-12 - создает сетку 479px  и 1fr
+	section.work-area
+		.container.gap-40
+			.work-area-content.grid-12
+				.work-area-col.rows-gap-20
+					h2.h2 Работаем в&nbsp;Саратове и&nbsp;СО
+					ul.work-area-list
+						li
+							a.text-link(href="#!") Саратов
+						li
+							a.text-link(href="#!") Энгельс
+						li
+							a.text-link(href="#!") Балаково
+						li
+							a.text-link(href="#!") Балашов
+						li
+							a.text-link(href="#!") Вольск
+						li
+							a.text-link(href="#!") Пугачёв
+						li
+							a.text-link(href="#!") Ртищево
+						li
+							a.text-link(href="#!") Петровск
+						li
+							a.text-link(href="#!") Аткарск
+						li
+							a.text-link(href="#!") Красноармейск
+						li
+							a.text-link(href="#!") Ершов
+					button.btn-primary
+						span Посмотреть все города
+						svg.svg-right
+							use(href='./img/sprite.svg#svg-right')
+				.work-area-map
+block variables
+	-var title = "Показатели компании";
