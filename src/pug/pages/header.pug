@@ -40,7 +40,71 @@ block content
 					a(href="#!").logo
 						img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='214' height='52' loading='lazy' alt='img')
 				
-				.header-menu
+				// HEADER DESKTOP MENU
+
+				.header-desktop-menu
+					ul.menu-list
+						li.menu-item.has-submenu
+							.menu-link
+								a(href='#!') Благоустройство
+							.menu-submenu-wrapper
+								ul.menu-submenu
+									li.submenu-item
+										a.submenu-link(href='#!') Услуги по благоустройству
+										ul.menu-sub-submenu
+											li.sub-submenu-item
+												a(href='#!') Услуги по благоустройству
+											li.sub-submenu-item
+												a(href='#!') Услуги по благоустройству
+											li.sub-submenu-item
+												a(href='#!') Услуги по благоустройству
+									
+									li.submenu-item
+										a.submenu-link(href='#!') В наличии на складе
+									li.submenu-item
+										a.submenu-link(href='#!') Распродажа
+						
+						
+						li.menu-item.has-submenu
+							.menu-link
+								a(href='#!') Аренда спецтехники
+								svg.menu-item-icon
+									use(href='./img/sprite.svg#svg-carret-down')
+							.menu-submenu-wrapper
+								ul.menu-submenu
+									li.submenu-item
+										a.submenu-link(href='#!') Каталог-все товары
+									li.submenu-item
+										a.submenu-link(href='#!') В наличии на складе
+									li.submenu-item
+										a.submenu-link(href='#!') Распродажа
+						li.menu-item.has-submenu
+							.menu-link
+								a(href='#!') Бетонные полы
+								svg.menu-item-icon
+									use(href='./img/sprite.svg#svg-carret-down')
+							.menu-submenu-wrapper
+								ul.menu-submenu
+									li.submenu-item
+										a.submenu-link(href='#!') Скамейки
+									li.submenu-item
+										a.submenu-link(href='#!') Перголы и беседки
+									li.submenu-item
+										a.submenu-link(href='#!') Качели
+									
+						li.menu-item
+							.menu-link
+								a(href='#!') Объекты
+						li.menu-item
+							.menu-link
+								a(href='#!') О компании
+									
+						li.menu-item
+							.menu-link
+								a(href='#!') Контакты
+				
+				
+				
 				.header-bottom-right
 					button.open-search.btn-square
 						svg.svg-search
