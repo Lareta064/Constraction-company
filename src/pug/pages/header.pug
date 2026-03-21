@@ -1,0 +1,62 @@
+extends ../layouts/layout.pug
+
+block content
+	header.header
+		//HEADER TOP
+		.header-top
+			.container
+				//left col
+				.header-top-left
+					.company-address.medi-12
+						address.address-text
+							svg.svg-pin
+								use(href='./img/sprite.svg#svg-pin')
+							span Саратовская область, г. Энгельс ул. Полиграфическая, 79 
+						
+						p.company-direction Cтроительство объектов, производство и благоустройство на всей территории Саратова и области
+				
+				
+				//right col
+				.header-top-right
+					.header-top-phone
+						p.medi-12.work-mode
+							svg.svg-clock
+								use(href='./img/sprite.svg#svg-clock')
+							span Работаем: Пн - Пт с 9 до 18
+						a(href="tel:+79271334344").phone-link.bold-18
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span +7 (927) 133-43-44
+					
+					a(href="#!").btn-outline
+						span Получить прайс
+						svg.svg-book
+							use(href='./img/sprite.svg#svg-book')
+
+		//HEADER BOTTOM
+		.header-bottom
+			.container
+				.logo-box
+					a(href="#!").logo
+						img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='214' height='52' loading='lazy' alt='img')
+				
+				.header-menu
+				.header-bottom-right
+					button.open-search.btn-square
+						svg.svg-search
+							use(href='./img/sprite.svg#svg-search')
+
+					.social-block
+						a(href="#!").social-item
+							svg.svg-whatsapp
+								use(href='./img/social-icons.svg#svg-whatsapp')
+						
+						a(href="#!").social-item
+							svg.svg-max
+								use(href='./img/social-icons.svg#svg-max')
+						
+						a(href="#!").social-item
+							svg.svg-telegram
+								use(href='./img/social-icons.svg#svg-telegram')
+block variables
+	-var title = "HEADER";

@@ -47,7 +47,7 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	background-size: contain;
 	background-position: center;
 }
-.svg-search{
+.svg-search, .svg-book{
 	width: remy(22);
 	height: remy(22);
 	color:  var(--primary1);
@@ -59,4 +59,9 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	width: remy(24);
 	height: remy(24);
 	color:  var(--primary1);
+}
+.svg-clock{
+	width: remy(14);
+	height: remy(14);
+	color: var(--header-text-color);
 }
