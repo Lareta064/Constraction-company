@@ -11,7 +11,22 @@
 		padding-block: remy(26);
 	}
 }
-.accent-section{
+.consultation-content.accent-section{
+	@media (max-width: 1364px) {
+	 .consultation-text{
+		max-width: remy(500);
+	 }
+	}
+	@media (max-width: 1199px) {
+		.form-wrapper {
+			width: remy(479);
+		}
+	}
+	@media (max-width: 1023px) {
+	.form-wrapper {
+			width: remy(350);
+		}
+	}
 	@media (max-width: 767px) {
 	.h2{font-size: remy(24);}
 	}

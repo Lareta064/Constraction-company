@@ -1,9 +1,16 @@
 @use '../base/_var' as *;
 //FOOTER
 footer.footer{
-	position: relative;
+	
 	color: var(--white);
-	&:before{
+	.footer-form{
+		position: relative;
+		.container{
+			position: relative;
+	       z-index: 2;
+		}
+	}
+	.footer-form:before{
 		content:'' ;
 		position: absolute;
 		top: 0;
@@ -13,28 +20,81 @@ footer.footer{
 		background-color: var(--body-bg);
 	}
 }
-footer.footer >*{
-	position: relative;
-	z-index: 2;
+.footer .logo{
+	img{
+		width: remy(277);
+		height: auto;
+		max-height: remy(67);
+	}
+	@media (max-width: 767px) {
+	img{
+		width: remy(220);
+		max-height: remy(54);
+	}
+	}
+}
+.footer-content > *+*>.container{
+border-top: 1px solid var(--secondary1);
 }
 .footer-top, 
 .footer-center,
 .footer-bottom{
-	.container{padding-block: remy(40); display: flex; align-items: center;gap: remy(40);}
+	.container{
+		padding-block: remy(40); 
+		display: flex; align-items: 
+		center;gap: remy(40);
+		@media (max-width: 1023px) {
+		padding-block: remy(20); 
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap:remy(20);
+		}
+	}
 }
 .footer-center{
 	.container{
 		align-items: flex-start;
+		@media (max-width: 1023px) {
+		 flex-direction: column;
+	 	 align-items: flex-start;
+	 	 row-gap:remy(20);
+		}
 	}
 }
 .footer-bottom {
 	.container{
+		padding-top: 20px;
 		justify-content: space-between;
 	}
+	@media (max-width: 1439px) {
+		.medi-16{font-size: remy(14);}
+	}
+	@media (max-width: 1279px) {
+	  .medi-16.txt-second {font-size: remy(12);}
+	}
+	@media (max-width: 1199px) {
+	 .container{
+		flex-wrap: wrap;
+		.medi-16.txt-second{
+			width: 100%;
+			text-align: center;
+		}
+	 }
+	}
+	@media (max-width: 767px) {
+	  .container{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		row-gap:remy(20);
+		.medi-16.txt-second{text-align: left; font-size: remy(16);}
+	  }
+	}
 }
-.footer-top{
-	.container{border-bottom: 1px solid var(--secondary1);}
-}
+
 .footer .logo-block{
 	align-items: center;
 	gap: remy(10);
@@ -44,6 +104,10 @@ footer.footer >*{
 	text-align: right;
 	.phone-link:hover{
 		color: var(--secondary1);
+	}
+	@media (max-width: 767px) {
+	  text-align: left;
+	  margin-left: 0;
 	}
 }
 .footer-contacts >*+*{margin-top: remy(20);}
@@ -75,7 +139,12 @@ a.contacts-item{
 	align-items: center;
 	column-gap: remy(40);
 	margin-left: auto;
-	
+	@media (max-width: 1023px) {
+	    margin-left: 0;
+	}
+	@media (max-width: 1023px) {
+	padding-block: remy(20);
+	}
 	.primary-link{
 		color: var(--white);
 	}

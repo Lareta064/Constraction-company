@@ -1,0 +1,11 @@
+.logo{
+	@media (max-width: 767px) {
+		img{
+ 			width: remy(220);
+			height: auto;
+			max-height: remy(54);
+			object-fit: contain;
+		}
+	    
+	}
+}
