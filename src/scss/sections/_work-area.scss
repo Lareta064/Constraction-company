@@ -31,7 +31,7 @@
 	column-count: 2;
 	column-gap:remy(30);
 	margin-bottom: remy(20);
-	.text-link{
+	.primary-link{
 		padding-block: remy(5);
 		margin-bottom: remy(20);
 		display: inline-block;
@@ -39,7 +39,7 @@
 	
 	@media (max-width: 1199px) {
 		column-gap:remy(10);
-		.text-link{margin-bottom:remy(10);}
+		.primary-link{margin-bottom:remy(10);}
 		margin-bottom: remy(10);
 	}
 	

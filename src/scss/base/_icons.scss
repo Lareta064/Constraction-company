@@ -11,7 +11,7 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	height: remy(22);
 	color: white;
 }
-.svg-round-check{
+.svg-round-check,.svg-pin{
 	width: remy(20);
 	height: remy(20);
 	color: white;
@@ -46,4 +46,17 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+}
+.svg-search{
+	width: remy(22);
+	height: remy(22);
+	color:  var(--primary1);
+}
+.svg-whatsapp,
+.svg-telegram,
+.svg-max,
+.svg-vk{
+	width: remy(24);
+	height: remy(24);
+	color:  var(--primary1);
 }

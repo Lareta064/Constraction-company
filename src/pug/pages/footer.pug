@@ -1,0 +1,91 @@
+extends ../layouts/layout.pug
+
+block content
+	//FOOTER
+	footer.footer.primary-bg
+		.footer-form
+			.container
+				.consultation-content.d-flex.pblock-120.accent-section
+					.consultation-text
+						.h2 У Вас остались вопросы?<br>Задайте их специалисту!
+					.form-wrapper.in-accent-wrapper
+						form.feedback-form
+							.form-item
+								input.form-inp(type="text" placeholder="Имя" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Email" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Телефон" required)
+							.form-item
+								textarea.form-text(placeholder="Задайте вопрос")
+							label.form-agree
+								.custom-label
+									input(type="checkbox" name="agree_input")
+									span.fake-checkbox
+								span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+							button.btn-dark.w-100(type="button")
+								span Отправить
+								svg.svg-email
+									use(href='./img/sprite.svg#svg-email')
+		.footer-content
+			//SINGLE ROW
+			.footer-top
+				.container
+					.logo-block.d-flex
+						.logo
+							img(src='./img/logo-footer.webp', srcset='./img/logo-footer@2x.webp 2x' width='277' height='67' loading='lazy' alt='img')
+						
+					.phone-block
+						p.txt-second.font-16 Получить бесплатную консультацию
+						a.phone-link.h2(href="tel:+79271334344") +7 (927) 133-43-44
+			//SINGLE ROW
+			.footer-center
+				.container
+					.footer-contacts
+						.contacts-list
+							.contacts-item
+								svg.svg-pin
+									use(href='./img/sprite.svg#svg-pin')
+								span.font-16 Саратовская область, г. Энгельс ул. Полиграфическая, 79
+							a(href="tel:+79271334344").contacts-item
+								svg.svg-phone
+									use(href='./img/sprite.svg#svg-phone')
+								span.font-16 +7 (927) 133-43-44
+							a(href="mailto:sy-72@yandex.ru").contacts-item
+								svg.svg-email
+									use(href='./img/sprite.svg#svg-email')
+								span.font-16 sy-72@yandex.ru
+						
+						//SOCIAL
+						.social-block.social-accent
+							a(href="#!").social-item
+								svg.svg-whatsapp
+									use(href='./img/social-icons.svg#svg-whatsapp')
+							
+							a(href="#!").social-item
+								svg.svg-max
+									use(href='./img/social-icons.svg#svg-max')
+							
+							a(href="#!").social-item
+								svg.svg-max
+									use(href='./img/social-icons.svg#svg-max')
+			
+					//FOOTER NAV
+					ul.footer-nav.medi-500
+						li
+							a(href="#!").white-link Портфолио
+						li
+							a(href="#!").white-link О компании
+						li
+							a(href="").white-link Реквизиты
+			
+			//SINGLE ROW
+			.footer-bottom
+				.container
+					p.medi-16.txt-second © 2026 «Строительное управление — 7». Все права защищены.
+					a.medi-16.link-second(href="") Политика конфиденциальности
+					p.developer.medi-14.txt-second Разработка сайта: #[a(href="#!").link-second Internet-Step.com]
+
+
+
+	-var title = "FOOTER";

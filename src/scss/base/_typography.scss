@@ -23,19 +23,7 @@
 .medi-12, .font-12{font-size: remy(12);font-weight: 400;line-height: 1.4;color: var(--secondary1);}
 .medi-12, .medi-14, .medi-16,.medi-18, .medi-20, .medi-24,.medi-28{font-weight: 500;}
 .bold-14, .bold-16,.bold-18, .bold-20, .bold-24,.bold-28{font-weight: 700;}
-.link-underline{
-	display: inline;
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
-	transition: .3s; 
-}
-.text-link{
-	transition: .3s;
-	color: var(--primary);
-	&:hover{
-		color: var(--accent1);
-	}
-}
+
 .pblock-140{
 	padding-block: remy(140);
 	@media (max-width: 1439px) {
@@ -151,6 +139,27 @@
 .txt-center{text-align: center;}
 .txt-accent{color: var(--accent2)}
 .txt-muted{color: var(--secondary);}
+.txt-second, .link-second{color: var(--secondary1);}
+.link-second:hover{color: var(--white);}
+.link-underline{
+	display: inline;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	transition: .3s; 
+}
+.primary-link, .white-link{
+	transition: .3s;
+	color: var(--primary);
+	&:hover{
+		color: var(--accent1);
+	}
+}
+.white-link{
+	color: var(--white);
+	&:hover{
+		color: var(--secondary1);
+	}
+}
 .h-white{color: var(--header-white);}
 
 .columns-text{

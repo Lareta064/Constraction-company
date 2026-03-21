@@ -153,3 +153,35 @@ input::placeholder, textarea::placeholder{
 	flex-direction: column;
 	&>*{width: 100%;}
 }
+.social-block{
+	display: flex;
+	align-items: center;
+	column-gap: remy(20);
+}
+.social-item{
+	flex-shrink: 0;
+	border: 1px solid var(--primary1);
+	border-radius: 10px;
+	padding: remy(14);
+	width: remy(52);
+	height: remy(52);
+	transition: .3s; 
+	svg{
+		color: var(--primary1);
+		transition: .3s; 
+	}
+	&:hover{
+		border: 1px solid var(--accent1);
+	}
+}
+.social-block.social-accent{
+	.social-item{
+		border: 1px solid var(--accent1);
+		svg{color: var(--accent1)}
+		&:hover{
+			 background-color: var(--white);
+			 border: 1px solid var(--white);
+			 svg{color: var(--primary);}
+		}
+	}
+}
