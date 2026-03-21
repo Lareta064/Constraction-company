@@ -5,9 +5,9 @@ block content
 	section.work-area
 		.container.gap-40
 			.work-area-content.grid-12
-				.work-area-col.rows-gap-20
-					h2.h2 Работаем в&nbsp;Саратове и&nbsp;СО
-					ul.work-area-list
+				.work-area-col
+					h2.h2.visible-desktop Работаем в&nbsp;Саратове и&nbsp;СО
+					ul.work-area-list.medi-20
 						li
 							a.text-link(href="#!") Саратов
 						li
@@ -25,6 +25,8 @@ block content
 						li
 							a.text-link(href="#!") Петровск
 						li
+							a.text-link(href="#!") Маркс
+						li
 							a.text-link(href="#!") Аткарск
 						li
 							a.text-link(href="#!") Красноармейск
@@ -35,5 +37,7 @@ block content
 						svg.svg-right
 							use(href='./img/sprite.svg#svg-right')
 				.work-area-map
+					h2.h2.hide-desktop Работаем в&nbsp;Саратове и&nbsp;СО
+					img(src='./img/map.webp'  width='987' height='549' loading='lazy' alt='img')
 block variables
 	-var title = "Показатели компании";

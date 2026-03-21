@@ -1,7 +1,50 @@
 @use '../base/_var' as *;
 /*===== WHY US =====*/
+
+.work-area-content.grid-12{
+  align-items: center;
+  @media (max-width: 1199px) {
+    grid-template-columns:1fr 2fr ;
+  }
+  @media (max-width: 1023px) {
+  grid-template-columns:1fr 1fr ;
+  }
+  @media (max-width: 767px) {
+    display: flex;
+	flex-direction: column-reverse;
+	
+	&>*{width: 100%;}
+  }
+}
+.work-area{
+	.h2{
+		margin-bottom: remy(35);
+		@media (max-width: 767px) {
+		  margin-bottom: remy(15);
+		}
+	}
+	@media (max-width: 767px) {
+	.btn-primary{width: 100%;}
+	}
+}
 .work-area-list{
 	column-count: 2;
+	column-gap:remy(30);
+	margin-bottom: remy(20);
+	.text-link{
+		padding-block: remy(5);
+		margin-bottom: remy(20);
+		display: inline-block;
+	}
 	
+	@media (max-width: 1199px) {
+		column-gap:remy(10);
+		.text-link{margin-bottom:remy(10);}
+		margin-bottom: remy(10);
+	}
 	
+	@media (max-width: 767px) {
+	 column-width: auto;
+	 column-gap:0;
+	}
 }
