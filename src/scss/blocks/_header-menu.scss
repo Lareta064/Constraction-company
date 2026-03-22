@@ -1,69 +1,105 @@
 @use '../base/_var' as *;
 /*HEADER MENU*/
-.header-desktop-menu{
+.header-desktop-menu{}
 .menu-list{
+display: flex;
+justify-content: center;
+width: 100%;
+column-gap:remy(20);
+.menu-item{
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+.menu-item .menu-submenu {}
+.menu-item.has-submenu{position: relative;}
+.menu-link{
 	display: flex;
-	justify-content: center;
-	width: 100%;
-	column-gap:remy(20);
- 	.menu-item{
-		padding-top: 5px;
-		padding-bottom: 20px;
-	}
-    .menu-item.has-submenu{position: relative;}
-	.menu-link{
-		display: flex;
-		align-items: center;
-		column-gap: remy(5);
-	}
-	.menu-link a{
-		font-size: remy(16);
-		font-weight: 500;
-		flex-grow: 1;
-		}
-	}
-	.menu-item-icon{
-		width: remy(18);
-		height: remy(18);
-		color: var(--primary)
-	}
-	.menu-submenu-wrapper{
-		border-radius: 12px;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: remy(320);
-		box-shadow: 4px 4px 50px 0 rgba(0, 0, 0, 0.05);
-		background: var(--white);
-		transform:translateY(0);
-		opacity: 0;
-		z-index: 5;
-		pointer-events: none; 
-		visibility: hidden!important;
-		transition:
-		opacity .2s ease,
-		transform .2s ease,
-		visibility 0s linear .2s;
-			
-	}
-	.menu-item.has-submenu:hover .menu-submenu-wrapper {
-		opacity: 1;
-		visibility: visible!important;;
-		pointer-events: auto;
-		transform: translateY(-10px);
-		transition:
-		opacity .2s ease,
-		transform .2s ease,
-		visibility 0s;
-	}
-	.menu-submenu{
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		.submenu-link{
-			width: 100%;
-			display: block;
-			transition: .3s; 
-		}
+	align-items: center;
+	column-gap: remy(5);
+	transition: .3s;
+	&:hover{color: var(--accent1);}
+}
+.menu-link a{
+	font-size: remy(16);
+	font-weight: 500;
+	flex-grow: 1;
 	}
 }
+.menu-item-icon{
+	width: remy(18);
+	height: remy(18);
+	color: var(--primary)
+}
+.menu-submenu-wrapper{
+	border-radius: 12px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: remy(320);
+	box-shadow: 4px 4px 50px 0 rgba(0, 0, 0, 0.05);
+	background: var(--white);
+	transform:translateY(0);
+	opacity: 0;
+	z-index: 5;
+	pointer-events: none; 
+	visibility: hidden!important;
+	transition:
+	opacity .2s ease,
+	transform .2s ease,
+	visibility 0s linear .2s;
+		
+}
+.menu-item.has-submenu:hover .menu-submenu-wrapper {
+	opacity: 1;
+	visibility: visible!important;;
+	pointer-events: auto;
+	transform: translateY(-10px);
+	transition:
+	opacity .2s ease,
+	transform .2s ease,
+	visibility 0s;
+}
+.menu-item.has-submenu:hover .menu-link{color: var(--accent1);}
+.menu-item.has-submenu:hover .menu-link svg{transform: rotate(180deg);}
+.menu-submenu{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	background: var(--white-bg);
+	border-radius: remy(12);
+	overflow: hidden;
+	padding-block: remy(10);
+	.submenu-link{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		column-gap:remy(6);
+		transition: .3s; 
+		padding: remy(10) remy(30);
+		padding-right: remy(10);
+		transition: .3s;
+		cursor:pointer;
+		&:hover{color: var(--accent1);}
+		svg{
+			flex-shrink: 0;
+			margin-left: auto;
+		}
+	}
+	.menu-sub-submenu{
+		padding-block: remy(15);
+		border-bottom: 1px solid var(--secondary2);
+		border-top: 1px solid var(--secondary2);
+	}
+	.sub-submenu-item a{
+		padding: remy(5) remy(30);
+		display: block;
+		transition: .3s;
+		&:hover{color: var(--accent1);}
+	}
+	.sub-submenu-item +.sub-submenu-item{margin-top: remy(10);}
+}
+.submenu-item.js-drop-item-active .submenu-link{padding-bottom: 20px; color: var(--accent1);}
+.submenu-item.js-drop-item-active svg{
+	transform: rotate(180deg);
+}
+.submenu-item.js-drop-item-active + .submenu-item .submenu-link{padding-top: 20px;}
