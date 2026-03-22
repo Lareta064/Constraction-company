@@ -39,17 +39,16 @@
 		opacity: 0;
 		z-index: 5;
 		pointer-events: none; 
-		visibility: hidden;
+		visibility: hidden!important;
 		transition:
 		opacity .2s ease,
 		transform .2s ease,
 		visibility 0s linear .2s;
 			
 	}
-	.menu-item.has-submenu:hover .menu-submenu-wrapper,
-	.menu-item.has-submenu:focus-within .menu-submenu-wrapper {
+	.menu-item.has-submenu:hover .menu-submenu-wrapper {
 		opacity: 1;
-		visibility: visible;
+		visibility: visible!important;;
 		pointer-events: auto;
 		transform: translateY(-10px);
 		transition:

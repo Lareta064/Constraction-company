@@ -202,3 +202,92 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 })();
+(() => {
+  const wrappers = document.querySelectorAll('.js-drop');
+  if (!wrappers.length) return;
+
+  // Один ResizeObserver — поддержка динамического контента (картинки, шрифты и т.д.)
+  const ro = new ResizeObserver(entries => {
+    for (const { target } of entries) {
+      const item = target.closest('.js-drop-item');
+      if (item && item.classList.contains('js-drop-item-active')) {
+        target.style.maxHeight = target.scrollHeight + 'px';
+      }
+    }
+  });
+
+  function getBody(item){
+    // твоя разметка: .acordion-button + .acordion-body
+    return item?.querySelector('.js-drop-button + .js-drop-body') || null;
+  }
+
+  function isButton(target, wrapper){
+    const btn = target.closest('.js-drop-button');
+    return btn && wrapper.contains(btn) ? btn : null;
+  }
+
+  function openItem(item){
+    const body = getBody(item);
+    if (!body) return;
+    item.classList.add('js-drop-item-active');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+
+  function closeItem(item){
+    const body = getBody(item);
+    if (!body) return;
+    item.classList.remove('js-drop-item-active');
+    body.style.maxHeight = '0';
+  }
+
+  function initWrapper(wrapper){
+    // наблюдаем все body внутри враппера
+    wrapper.querySelectorAll('.js-drop-body').forEach(b => ro.observe(b));
+
+    // если какие-то элементы предустановлены активными — раскроем их
+    wrapper.querySelectorAll('.js-drop-item.js-drop-item-active').forEach(item => {
+      const body = getBody(item);
+      if (body) body.style.maxHeight = body.scrollHeight + 'px';
+    });
+
+    // клик-делегирование
+    wrapper.addEventListener('click', (e) => {
+      const btn = isButton(e.target, wrapper);
+      if (!btn) return;
+
+      const item = btn.closest('.js-drop-item');
+      const mode = (wrapper.dataset.mode || 'multiple').toLowerCase();
+
+      const isActive = item.classList.contains('js-drop-item-active');
+
+      if (mode === 'single') {
+        // радиорежим: если клик по уже активному — закрываем всё; иначе закрываем прошлый и открываем новый
+        const prev = wrapper.querySelector('.js-drop-item-active');
+        if (prev && prev !== item) closeItem(prev);
+
+        if (isActive) {
+          closeItem(item);            // оставить всё закрытым
+        } else {
+          openItem(item);             // открыть текущий
+        }
+      } else {
+        // мульти: просто togglе текущего, не трогая другие
+        isActive ? closeItem(item) : openItem(item);
+      }
+    });
+  }
+  // DOM готов
+  document.addEventListener('DOMContentLoaded', () => {
+    wrappers.forEach(initWrapper);
+  });
+
+  // на full load ещё раз подстроим высоты (для поздно загрузившихся картинок)
+  window.addEventListener('load', () => {
+    wrappers.forEach(wrapper => {
+      wrapper.querySelectorAll('.js-drop-item.js-drop-item-active').forEach(item => {
+        const body = getBody(item);
+        if (body) body.style.maxHeight = body.scrollHeight + 'px';
+      });
+    });
+  });
+})();

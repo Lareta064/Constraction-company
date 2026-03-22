@@ -48,21 +48,38 @@ block content
 							.menu-link
 								a(href='#!') Благоустройство
 							.menu-submenu-wrapper
-								ul.menu-submenu
-									li.submenu-item
-										a.submenu-link(href='#!') Услуги по благоустройству
-										ul.menu-sub-submenu
-											li.sub-submenu-item
-												a(href='#!') Услуги по благоустройству
-											li.sub-submenu-item
-												a(href='#!') Услуги по благоустройству
-											li.sub-submenu-item
-												a(href='#!') Услуги по благоустройству
+								ul.menu-submenu.js-drop(data-mode='multiple')
+									li.submenu-item.js-drop-item
+										a.submenu-link.js-drop-button(href='#!') Услуги по благоустройству
+										.js-drop-body
+											ul.menu-sub-submenu.js-drop-content
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
 									
-									li.submenu-item
-										a.submenu-link(href='#!') В наличии на складе
-									li.submenu-item
-										a.submenu-link(href='#!') Распродажа
+									li.submenu-item.js-drop-item
+										a.submenu-link.js-drop-button(href='#!') Услуги по асфальтированию
+										.js-drop-body
+											ul.menu-sub-submenu.js-drop-content
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+									li.submenu-item.js-drop-item
+										a.submenu-link.js-drop-button(href='#!') Услуги по благоустройству
+										.js-drop-body
+											ul.menu-sub-submenu.js-drop-content
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
+												li.sub-submenu-item
+													a(href='#!') Услуги по благоустройству
 						
 						
 						li.menu-item.has-submenu
@@ -122,5 +139,8 @@ block content
 						a(href="#!").social-item
 							svg.svg-telegram
 								use(href='./img/social-icons.svg#svg-telegram')
+
+
+
 block variables
 	-var title = "HEADER";
