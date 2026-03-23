@@ -1,0 +1,35 @@
+extends ../layouts/layout.pug
+
+block content
+	section.hero
+		.hero-bg
+			.container
+				.hero-wrapper
+					.hero-column
+						h1.h1 Строительное управление — 7, 15 лет в сфере асфальтирования и благоустройства
+					
+						button.play-btn-group(type="button")
+							span.btn-play
+							span Смотреть видео<br>компании
+					
+					.form-wrapper.white-card
+						.bold-16 Консультация по телефону
+						form.feedback-form
+							.form-item
+								input.form-inp(type="text" placeholder="Имя" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Телефон" required)
+							label.form-agree
+								.custom-label
+									input(type="checkbox" name="agree_input")
+									span.fake-checkbox
+								
+								span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+							button.btn-primary.w-100(type="button")
+								span Жду звонка
+								svg.svg-round-check
+									use(href='./img/sprite.svg#svg-round-check')
+
+
+block variables
+	-var title = "HEADER";

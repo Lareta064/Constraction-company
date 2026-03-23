@@ -2,17 +2,18 @@ extends ../layouts/layout.pug
 
 block content
 	.page-content
-		//- include ../sections/_header.pug
+		include ../sections/_header.pug
 		main.main-page
-			include section-benefits.pug
-			include section-services.pug
-			include consultation.pug
-			include portfolio.pug
-			include review-documents.pug
-			include review-partners.pug
-			include our-team.pug
+			include ../sections/_hero-main.pug
+			include ../sections/_benefits-main.pug
+			include ../sections/_services.pug
+			include ../sections/_consultation-form.pug
+			include ../sections/_portfolio.pug
+			include ../sections/_review-documents.pug
+			include ../sections/_review-partners.pug
+			include ../sections/_our-team.pug
 					
 		include ../sections/_footer.pug
 			
 block variables
-	-var title = "Project";
+	-var title = "Home";

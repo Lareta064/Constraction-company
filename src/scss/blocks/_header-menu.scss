@@ -7,8 +7,8 @@ justify-content: center;
 width: 100%;
 column-gap:remy(20);
 .menu-item{
-	padding-top: 5px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .menu-item .menu-submenu {}
 .menu-item.has-submenu{position: relative;}
@@ -17,6 +17,7 @@ column-gap:remy(20);
 	align-items: center;
 	column-gap: remy(5);
 	transition: .3s;
+	white-space: nowrap;
 	&:hover{color: var(--accent1);}
 }
 .menu-link a{

@@ -1,0 +1,24 @@
+//consultation		
+section.consultation.has-primary-section
+	.container
+		.consultation-content.d-flex.pblock-140.primary-section
+			.consultation-text
+				.h2 Консультация, расчёт сметы и&nbsp;материала бесплатно
+			.form-wrapper
+				form.feedback-form
+					.form-item
+						input.form-inp(type="text" placeholder="Имя" required)
+						p.medi-12 Additional text
+					.form-item.form-item-invalid
+						input.form-inp(type="text" placeholder="Телефон" required)
+						p.medi-12 Error text
+					label.form-agree
+						.custom-label
+							input(type="checkbox" name="agree_input")
+							span.fake-checkbox
+						
+						span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+					button.btn-primary.w-100(type="button")
+						span Получить консультацию
+						svg.svg-round-check
+							use(href='./img/sprite.svg#svg-round-check')

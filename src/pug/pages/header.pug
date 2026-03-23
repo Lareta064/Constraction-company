@@ -41,96 +41,97 @@ block content
 						img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='214' height='52' loading='lazy' alt='img')
 				
 				// HEADER DESKTOP MENU
-
-				.header-desktop-menu
-					ul.menu-list
-						li.menu-item.has-submenu
-							.menu-link
-								a(href='#!') Благоустройство
-								svg.svg-carret-down
-									use(href='./img/sprite.svg#svg-carret-down')
-							.menu-submenu-wrapper
-								ul.menu-submenu.js-drop(data-mode='single')
-									li.submenu-item.js-drop-item
-										span.submenu-link.js-drop-button Услуги по благоустройству
-											svg.svg-carret-down
-												use(href='./img/sprite.svg#svg-carret-down')
-										.js-drop-body
-											ul.menu-sub-submenu.js-drop-content
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-									
-									li.submenu-item.js-drop-item
-										span.submenu-link.js-drop-button Услуги по асфальтированию
-											svg.svg-carret-down
-												use(href='./img/sprite.svg#svg-carret-down')
-										.js-drop-body
-											ul.menu-sub-submenu.js-drop-content
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-									
-									li.submenu-item.js-drop-item
-										span.submenu-link.js-drop-button Услуги по благоустройству
-											svg.svg-carret-down
-												use(href='./img/sprite.svg#svg-carret-down')
-										.js-drop-body
-											ul.menu-sub-submenu.js-drop-content
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-												li.sub-submenu-item
-													a(href='#!') Услуги по благоустройству
-						
-						
-						li.menu-item.has-submenu
-							.menu-link
-								a(href='#!') Аренда спецтехники
-								svg.menu-item-icon
-									use(href='./img/sprite.svg#svg-carret-down')
-							.menu-submenu-wrapper
-								ul.menu-submenu
-									li.submenu-item
-										a.submenu-link(href='#!') Каталог-все товары
-									li.submenu-item
-										a.submenu-link(href='#!') В наличии на складе
-									li.submenu-item
-										a.submenu-link(href='#!') Распродажа
-						li.menu-item.has-submenu
-							.menu-link
-								a(href='#!') Бетонные полы
-								svg.menu-item-icon
-									use(href='./img/sprite.svg#svg-carret-down')
-							.menu-submenu-wrapper
-								ul.menu-submenu
-									li.submenu-item
-										a.submenu-link(href='#!') Скамейки
-									li.submenu-item
-										a.submenu-link(href='#!') Перголы и беседки
-									li.submenu-item
-										a.submenu-link(href='#!') Качели
-									
-						li.menu-item
-							.menu-link
-								a(href='#!') Объекты
-						li.menu-item
-							.menu-link
-								a(href='#!') О компании
-									
-						li.menu-item
-							.menu-link
-								a(href='#!') Контакты
+				.header-menu-wrapper
+					.header-menu
+						ul.menu-list
+							li.menu-item.has-submenu
+								.menu-link
+									a(href='#!') Благоустройство
+									svg.svg-carret-down
+										use(href='./img/sprite.svg#svg-carret-down')
+								.menu-submenu-wrapper
+									ul.menu-submenu.js-drop(data-mode='single')
+										li.submenu-item.js-drop-item
+											span.submenu-link.js-drop-button Услуги по благоустройству
+												svg.svg-carret-down
+													use(href='./img/sprite.svg#svg-carret-down')
+											.js-drop-body
+												ul.menu-sub-submenu.js-drop-content
+													li.sub-submenu-item
+														a(href='#!') Асвальтирование
+													li.sub-submenu-item
+														a(href='#!') Укладка тротуарной плитки
+													li.sub-submenu-item
+														a(href='#!') Озеленение
+										
+										li.submenu-item.js-drop-item
+											span.submenu-link.js-drop-button Аренда спецтехники
+												svg.svg-carret-down
+													use(href='./img/sprite.svg#svg-carret-down')
+											.js-drop-body
+												ul.menu-sub-submenu.js-drop-content
+													li.sub-submenu-item
+														a(href='#!') Аренда бульдозера
+													li.sub-submenu-item
+														a(href='#!') Аренда мини- погрузчика
+													li.sub-submenu-item
+														a(href='#!') Аренда катка
+										
+										li.submenu-item.js-drop-item
+											span.submenu-link.js-drop-button Бетонные полы
+												svg.svg-carret-down
+													use(href='./img/sprite.svg#svg-carret-down')
+											.js-drop-body
+												ul.menu-sub-submenu.js-drop-content
+													li.sub-submenu-item
+														a(href='#!') Бетонные полы
+													li.sub-submenu-item
+														a(href='#!') Топ бетон
+													li.sub-submenu-item
+														a(href='#!') Мозаичные полы
+													li.sub-submenu-item
+														a(href='#!') Шлифование бетонных полов
+							
+							li.menu-item.has-submenu
+								.menu-link
+									a(href='#!') Аренда спецтехники
+									svg.svg-carret-down
+										use(href='./img/sprite.svg#svg-carret-down')
+								
+								.menu-submenu-wrapper
+									ul.menu-submenu
+										li.submenu-item
+											a.submenu-link(href='#!') Аренда бульдозера
+										li.submenu-item
+											a.submenu-link(href='#!') Аренда мини- погрузчика
+										li.submenu-item
+											a.submenu-link(href='#!') Аренда катка
+							
+							li.menu-item.has-submenu
+								.menu-link
+									a(href='#!') Бетонные полы
+									svg.menu-item-icon
+										use(href='./img/sprite.svg#svg-carret-down')
+								.menu-submenu-wrapper
+									ul.menu-submenu
+										li.submenu-item
+											a.submenu-link(href='#!') Бетонные полы
+										li.submenu-item
+											a.submenu-link(href='#!') Топ бетон
+										li.submenu-item
+											a.submenu-link(href='#!') Мозаичные полы
+										li.submenu-item
+											a.submenu-link(href='#!') Шлифование бетонных полов
+							
+							li.menu-item
+								.menu-link
+									a(href='#!') Объекты
+										
+							li.menu-item
+								.menu-link
+									a(href='#!') Контакты
 				
-				
-				
+				//RIGHT COLUMN
 				.header-bottom-right
 					button.open-search.btn-square
 						svg.svg-search

@@ -101,3 +101,10 @@
 .in-accent-wrapper {
 	.custom-label .fake-checkbox{border:1px solid var(--secondary1);}
 }
+.form-wrapper.white-card{
+	padding: 40px;
+	&>*+*{margin-top: remy(20);}
+	@media (max-width: 1199px) {
+	padding: 20px;
+	}
+}

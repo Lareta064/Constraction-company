@@ -84,3 +84,32 @@
 	cursor:pointer;
 	&:hover{background-color: var(--primary);}
 }
+.play-btn-group{
+	background: rgba(0, 0, 0, 0.3);
+	height: remy(60);
+	padding-left: remy(70);
+	padding-right: 20px;
+	display: inline-block;
+	border-radius: remy(30);
+	position: relative;
+	text-align: left;
+	transition: .3s;
+	width: fit-content;
+	span{
+		color: white;
+		font-size: remy(14);
+		font-weight: 500;
+		transition: .3s; 
+	}
+	.btn-play{
+		top: 0;
+		left: 0;
+		z-index: 2;
+		transform: unset;
+	}
+}
+.play-btn-group:hover{
+	background: rgba(0, 0, 0, 0.6);
+	span{color: var(--secondary1)}
+	.btn-play{background-color: var(--primary);}
+}

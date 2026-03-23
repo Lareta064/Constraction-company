@@ -60,12 +60,15 @@ body {
 		display: flex;
 		flex-direction: column;
 		row-gap: remy(140);
+		padding-bottom: remy(140);
 		&>*{width: 100%;}
 		@media (max-width: 1439px) {
 		  row-gap: remy(100);
+		  padding-bottom: remy(100);
 		}
 		@media (max-width: 767px) {
 		row-gap: remy(80);
+		padding-bottom: remy(80);
 		}
 	}
 }
