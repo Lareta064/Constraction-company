@@ -1,4 +1,7 @@
 @use '_var' as *;
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
 .form-item{
 	position: relative;
 	width: 100%;

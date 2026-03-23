@@ -1,6 +1,16 @@
 @use '_var' as *;
 /*==== SVG SPRITE===*/
 svg{display: inline-block; transition: .3s;flex-shrink:0 }
+.svg-cross{
+	width: remy(28);
+	height: remy(28);
+	color: var(--primary);
+}
+.svg-delete{
+	width: remy(28);
+	height: remy(28);
+	color: var(--accent2);
+}
 .svg-right{
 	width: remy(22);
 	height: remy(22);

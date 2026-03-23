@@ -1,0 +1,34 @@
+#search-block.search-block-popup
+	.container
+		.search-block.flex-col-40
+			form.search-form
+				.form-item.form-item-search
+					input#search-input.form-inp(type="search"  name="search_input" placeholder="Трактор, спецтехника и т.д....")
+					button(type="submit").btn-primary
+						span Найти
+						svg.svg-search
+							use(href='./img/sprite.svg#svg-search')
+					button#popup-close.popup-close-btn(type="button")
+						svg.svg-cross
+							use(href='./img/sprite.svg#svg-cross')
+			.search-results-wrapper
+				.popular-queries.list-box
+					.bold-18.txt-muted Популярные запросы
+					.links-list.medi-16
+						a(href="#!").primary-link Асфальтоукладчик 
+						a(href="#!").primary-link Мини-погрузчик
+						a(href="#!").primary-link Аренда катка
+						a(href="#!").primary-link Бетонные полы
+				
+				.search-results-history.list-box
+					.bold-18.txt-muted Вы искали
+					.links-list.medi-16
+						a(href="#!").primary-link Укладка тротуарной плитки
+						a(href="#!").primary-link Мини-погрузчик
+						a(href="#!").primary-link Аренда катка
+				
+					
+					button(type="button").icon-text.btn-remove
+						span Очистить
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')

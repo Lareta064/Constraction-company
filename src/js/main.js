@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 		});
 	}
+
 	let documentsReview = new Swiper(".review-documents", {
 		slidesPerView: 'auto',
 		speed: 1000,
@@ -97,7 +98,19 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Carousel.change": (fancybox) => updateCounter(fancybox),
 	},
 	});
-
+Fancybox.bind('[data-fancybox="search"]', {
+  on: {
+   ready: (fancybox) => {
+      fancybox.container.classList.add("fancybox-search");
+    },
+    
+  }
+});
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#popup-close")) {
+    Fancybox.close();
+  }
+});
 	function updateCounter(fancybox) {
 	let counter = fancybox.container.querySelector(".my-fancybox-counter");
 

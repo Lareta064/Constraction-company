@@ -113,3 +113,16 @@
 	span{color: var(--secondary1)}
 	.btn-play{background-color: var(--primary);}
 }
+.btn-remove{
+	width: fit-content;
+	svg{transition: .3s; }
+	color: var(--accent2);
+	&:hover{color: var(--secondary);}
+	&:hover svg {color: var(--secondary);}
+	@media (max-width: 767px) {
+	svg{	
+		width: remy(18);
+		height: remy(18);
+	}
+	}
+}
