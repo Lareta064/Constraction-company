@@ -13,6 +13,10 @@
 	margin: 0;
 	&:after{font-size: remy(18); color: var(--primary1)}
 }
+.swiper{
+	img{border-radius: remy(12);}
+	
+}
 .has-swiper .swiper{
 	padding-bottom: 50px;
 	@media (max-width: 767px) {

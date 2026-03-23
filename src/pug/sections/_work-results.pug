@@ -1,0 +1,42 @@
+//WORK RESULTS
+section.work-results
+	.container.gap-40
+		.header-block
+			h2.h2 Результаты работ
+		.work-results-content
+			//single row
+			.work-result-item
+				a(href="./img/result1.webp" data-fancybox="gallery").result-card
+					.label Было
+					picture
+						source(srcset="./img/result1-w375.webp 1x, ./img/result1-w375@2x.webp 2x"  media="(max-width: 767px)")
+						img(src='./img/result1.webp', srcset='./img/result1@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+
+				a(href="./img/result11.webp" data-fancybox="gallery").result-card
+					.label Стало
+					picture
+						source(srcset="./img/result11-w375.webp 1x, ./img/result11-w375@2x.webp 2x"  media="(max-width: 767px)")
+						img(src='./img/result11.webp', srcset='./img/result11@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+			//single row
+			.work-result-item
+				a(href="./img/result2.webp" data-fancybox="gallery").result-card
+					.label Было
+					picture
+						source(srcset="./img/result2-w375.webp 1x, ./img/result2-w375@2x.webp 2x"  media="(max-width: 767px)")
+						img(src='./img/result2.webp', srcset='./img/result2@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+
+				a(href="./img/result22.webp" data-fancybox="gallery").result-card
+					.label Стало
+					picture
+						source(srcset="./img/result22-w375.webp 1x, ./img/result22-w375@2x.webp 2x"  media="(max-width: 767px)")
+						img(src='./img/result22.webp', srcset='./img/result22@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+		.buttons-wrapper
+			button.btn-dark(type="button")
+				span Загрузить еще
+				svg.svg-plus
+					use(href='./img/sprite.svg#svg-plus')
+			a.btn-primary(href="#!")
+				span Все объекты
+				svg.svg-right
+					use(href='./img/sprite.svg#svg-right')
+					

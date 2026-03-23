@@ -1,0 +1,74 @@
+@use '../base/_var' as *;
+//WORK RESULTS
+.work-result-item{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: remy(30);
+	@media (max-width: 1439px) {
+	 gap: remy(20);
+	}
+	@media (max-width: 767px) {
+	 gap: remy(10);
+	}
+}
+.work-result-item +.work-result-item{
+	margin-top: remy(30)
+}
+.result-card{
+	border-radius: remy(12);
+	overflow: hidden;
+	position: relative;
+	img{
+		aspect-ratio: 733/480;
+		width: 100%;
+		object-fit: cover;
+		@media (max-width: 767px) {
+		 aspect-ratio: 189/124;
+		}
+	}
+	.label{
+		position: absolute;
+		bottom: remy(30);
+		left: remy(30);
+		z-index: 4;
+		@media (max-width: 1199px) {
+		 bottom: remy(20);
+		 left: remy(20);
+		}
+		@media (max-width: 767px) {
+		 bottom: remy(10);
+		 left: remy(10);
+		}
+	}
+}
+.result-card:after{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0,0,0, .3);
+	z-index: 2;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='37' viewBox='0 0 36 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.04598 4.04605C9.44093 -1.3489 18.1888 -1.34846 23.5841 4.04605C28.6502 9.11221 28.9581 17.1335 24.5098 22.5602L35.5694 33.7706C36.1507 34.3603 36.144 35.31 35.5547 35.8917C34.9652 36.4731 34.0155 36.4675 33.4337 35.8785L22.3682 24.6608C16.9457 28.9479 9.05319 28.5913 4.04598 23.5841C-1.34848 18.1889 -1.34883 9.44101 4.04598 4.04605ZM21.0587 5.78482C16.8131 1.94938 10.2585 2.07569 6.16707 6.16714C1.94383 10.3905 1.94418 17.2394 6.16707 21.463C10.3301 25.6261 17.0408 25.6825 21.2769 21.6388C21.3094 21.5995 21.3453 21.5626 21.3824 21.526C21.423 21.486 21.4646 21.4477 21.5084 21.4132C25.5535 17.3186 25.6676 10.8005 21.8467 6.57144L21.463 6.16714L21.0587 5.78482ZM13.8765 8.59438C14.7046 8.59469 15.3763 9.26635 15.3765 10.0944V12.7194H18.0015C18.8296 12.7197 19.5013 13.3913 19.5015 14.2194C19.5015 15.0476 18.8297 15.7191 18.0015 15.7194H15.3765V18.3444C15.3765 19.1726 14.7047 19.8441 13.8765 19.8444C13.0481 19.8444 12.3765 19.1728 12.3765 18.3444V15.7194H9.75154C8.92311 15.7194 8.25154 15.0478 8.25154 14.2194C8.25178 13.3912 8.92326 12.7194 9.75154 12.7194H12.3765V10.0944C12.3768 9.26616 13.0483 8.59438 13.8765 8.59438Z' fill='white' /%3e%3c/svg%3e");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: remy(36);
+	transform: translateY(100%);
+	transition: .3s; 
+}
+.result-card:hover:after{
+	transform: translateY(0);
+}
+.buttons-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: remy(30);
+	.btn-dark, .btn-primary{min-width: remy(210);}
+	@media (max-width: 1439px) {
+	  column-gap: remy(20);
+	}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  row-gap: remy(10);
+	  .btn-dark, .btn-primary{width: 100%;}
+	}
+}

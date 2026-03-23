@@ -101,24 +101,71 @@ document.addEventListener('DOMContentLoaded', function() {
         },
      }
   });
-	/*FANCYBOX */
-	Fancybox.bind('[data-fancybox="gallery"]', {
-	Thumbs: false,
-
-	Toolbar: {
-		display: {
-		left: [],
-		middle: [],
-		right: ["close"],
+	let videoSlider = new Swiper(".video-swiper", {
+		slidesPerView: 'auto',
+		speed: 1000,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".video-next",
+			prevEl: ".video-prev",
 		},
-	},
 
-	on: {
-		ready: (fancybox) => updateCounter(fancybox),
-		"Carousel.change": (fancybox) => updateCounter(fancybox),
-	},
+	  breakpoints: {
+
+        1024: {
+           slidesPerView: 3,
+          spaceBetween:20,
+        },
+		1200: {
+           slidesPerView: 4,
+          spaceBetween:20,
+        },
+		1440: {
+           slidesPerView: 4,
+           spaceBetween:30,
+        },
+      },
+    });
+
+
+  
+	/*FANCYBOX */
+  const galleryFancybox = document.querySelector('[data-fancybox="gallery"]');
+  const teamFancybox = document.querySelector('[data-fancybox="team-video"]');
+  const resultFancybox = document.querySelector('[data-fancybox="team-video"]');
+  const videoFancybox = document.querySelector('[data-fancybox="video-gallery"]');
+ 
+ if(galleryFancybox){
+   Fancybox.bind('[data-fancybox="gallery"]', {
+     Thumbs: false,
+ 
+     Toolbar: {
+       display: {
+       left: [],
+       middle: [],
+       right: ["close"],
+       },
+     },
+ 
+     on: {
+       ready: (fancybox) => updateCounter(fancybox),
+       "Carousel.change": (fancybox) => updateCounter(fancybox),
+     },
+   });
+ }
+  if(teamFancybox){
+	Fancybox.bind('[data-fancybox="video-gallery"]', {
+	  Thumbs: false,
+    Toolbar: {
+      display: {
+      left: [],
+      middle: [],
+      right: ["close"],
+      },
+    }
 	});
-  	/*FANCYBOX */
+ }
+  if(teamFancybox){
 	Fancybox.bind('[data-fancybox="team-video"]', {
 	  Thumbs: false,
     Toolbar: {
@@ -129,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     }
 	});
- 
+ }
 Fancybox.bind('[data-fancybox="form-popup"]', {
   Thumbs: false,
   dragToClose: false,

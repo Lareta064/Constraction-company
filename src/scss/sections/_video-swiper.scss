@@ -1,0 +1,29 @@
+@use '../base/_var' as *;
+/*===== VIDEO SLIDER =====*/
+.video-swiper{
+	.video-slide{
+		position: relative;
+		.btn-play{
+			transform: translate(-50%, 0);
+			top: auto;
+			bottom: remy(30);
+			@media (max-width: 767px) {
+			 bottom: remy(10);
+			}
+		}
+		img{
+			aspect-ratio: 352/480;
+			width: 100%;
+			object-fit: cover;
+			@media (max-width: 767px) {
+			aspect-ratio:180 / 245;
+			}
+		}
+		
+	}
+	.swiper-slide{
+		@media (max-width: 1023px) {
+			width: 180px!important;
+		}
+	}
+}
