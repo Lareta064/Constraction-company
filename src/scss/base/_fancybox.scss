@@ -1,4 +1,14 @@
 @use '_var' as *;
+.search-block-popup, .form-popup{display: none;}
+.is-compact .fancybox__content>.f-button.is-close-btn{top: remy(-38);}
+.fancybox__content>.f-button.is-close-btn svg{ width: remy(21); height: remy(21);}
+.fancybox__container [data-fancybox-close]{
+    background-color: transparent;
+	color: var(--primary);
+}
+.fancybox__container{
+ .form-popup{display: block;}
+}
 .fancybox__container.fancybox-search{
 	.fancybox__content{
 		padding: 0;
@@ -7,8 +17,7 @@
 		display: none;
 		@media (max-width: 767px) {
 		  display: block;
-		  background-color: transparent;
-		  color: var(--primary);
+		 
 		}
 	}
 	.popup-close-btn{
@@ -22,6 +31,7 @@
 	}
 	.search-block-popup{
 		width: 100%;
+		display: block;
 		padding-block: remy(100);
 		@media (max-width: 1199px) {
 		  padding-bottom: remy(40);

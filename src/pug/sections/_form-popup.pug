@@ -1,0 +1,18 @@
+#form-popup.form-popup
+	.form-wrapper.white-card
+		.bold-16 Консультация по телефону
+		form.feedback-form
+			.form-item
+				input.form-inp(type="text" placeholder="Имя" required)
+			.form-item
+				input.form-inp(type="text" placeholder="Телефон" required)
+			label.form-agree
+				.custom-label
+					input(type="checkbox" name="agree_input")
+					span.fake-checkbox
+				
+				span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+			button.btn-primary.w-100(type="button")
+				span Отправить
+				svg.svg-email
+					use(href='./img/sprite.svg#svg-email')

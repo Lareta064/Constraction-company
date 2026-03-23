@@ -1,0 +1,34 @@
+@use '../base/_var' as *;
+//GALLERY SWIPER
+.centered-swiper .swiper-slide {
+  width: remy(988);
+  transition: transform 0.3s ease;
+  transform: scale(0.94);
+  img{
+	border-radius: remy(12);
+	aspect-ratio: 988/560;
+	object-fit: cover;
+}
+  @media (max-width: 1364px) {
+	 width: remy(880);
+  }
+  @media (max-width: 1199px) {
+    width: remy(800);
+  }
+  @media (max-width: 1023px) {
+    width: remy(388);
+	transform: scale(1);
+	img{
+		aspect-ratio: 388/220;
+	}
+  }
+  @media (max-width: 424px) {
+    width: remy(345);
+  }
+}
+
+.centered-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+}

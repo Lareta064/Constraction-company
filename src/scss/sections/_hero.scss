@@ -5,6 +5,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
+	.hero-title >*+*{margin-top: remy(20);}
 	.h1{
 		color: var(--promo-title);
 		@media (max-width: 1699px) {
@@ -18,7 +19,11 @@
 		}
 	}
 	.container{display: flex;}
-	.form-wrapper{width: remy(510);}
+	.form-wrapper{
+		width: remy(510);
+		margin-left: auto;
+		
+	}
 	@media (max-width: 1364px) {
 		.form-wrapper{
 			width: 100%;
@@ -28,6 +33,10 @@
 	@media (max-width: 1023px) {
 		height: calc(100dvh - 92px);
 		min-height: remy(760);
+		.form-wrapper{
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 .hero-bg{

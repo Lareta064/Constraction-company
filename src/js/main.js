@@ -81,8 +81,28 @@ document.addEventListener('DOMContentLoaded', function() {
         },
       },
     });
+  let gallerySwiper = new Swiper('.gallery-swiper', {
+    slidesPerView: 'auto',
+    speed:1000,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+			nextEl: ".gallery-next",
+			prevEl: ".gallery-prev",
+		},
+		pagination: {
+        el: ".gallery-swiper .swiper-pagination",
+      },
+     breakpoints: {
+        1024: {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween:0,
+        },
+     }
+  });
 	/*FANCYBOX */
-	Fancybox.bind("[data-fancybox]", {
+	Fancybox.bind('[data-fancybox="gallery"]', {
 	Thumbs: false,
 
 	Toolbar: {
@@ -98,7 +118,57 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Carousel.change": (fancybox) => updateCounter(fancybox),
 	},
 	});
+  	/*FANCYBOX */
+	Fancybox.bind('[data-fancybox="team-video"]', {
+	  Thumbs: false,
+    Toolbar: {
+      display: {
+      left: [],
+      middle: [],
+      right: ["close"],
+      },
+    }
+	});
+ 
+Fancybox.bind('[data-fancybox="form-popup"]', {
+  Thumbs: false,
+  dragToClose: false,
+
+  Toolbar: {
+    display: {
+      left: [],
+      middle: [],
+      right: ["close"],
+    },
+  },
+
+  Carousel: {
+    Panzoom: {
+      touch: false,
+      rubberband: false,
+      bounce: false,
+    },
+  },
+});
 Fancybox.bind('[data-fancybox="search"]', {
+    Thumbs: false,
+  dragToClose: false,
+
+  Toolbar: {
+    display: {
+      left: [],
+      middle: [],
+      right: ["close"],
+    },
+  },
+
+  Carousel: {
+    Panzoom: {
+      touch: false,
+      rubberband: false,
+      bounce: false,
+    },
+  },
   on: {
    ready: (fancybox) => {
       fancybox.container.classList.add("fancybox-search");
@@ -106,6 +176,8 @@ Fancybox.bind('[data-fancybox="search"]', {
     
   }
 });
+
+
 document.addEventListener("click", (e) => {
   if (e.target.closest("#popup-close")) {
     Fancybox.close();

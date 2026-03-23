@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-content
+		include ../sections/_header.pug
+		main.main-page
+			include ../sections/_hero-main2.pug
+			include ../sections/_benefits-main2.pug
+			include ../sections/_portfolio.pug
+			include ../sections/_gallery-swiper.pug
+			include ../sections/_consultation-form.pug
+			include ../sections/_work-results.pug
+			
+			include ../sections/_review-documents.pug
+			include ../sections/_review-partners.pug
+			include ../sections/_our-team.pug
+			include ../sections/_achievments.pug
+			include ../sections/_faq.pug
+			include ../sections/_work-area.pug
+					
+		include ../sections/_footer.pug
+			
+block variables
+	-var title = "Home v2";

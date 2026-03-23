@@ -1,0 +1,40 @@
+//GALLERY SWIPER
+section.gallery-slider.has-swiper
+	.container.gap-40
+		.header-block
+			h2.h2 Фотогалерея
+			.swiper-navigation
+				button.swiper-button-prev.gallery-prev
+				button.swiper-button-next.gallery-next
+					
+		
+		.gallery-swiper.swiper.centered-swiper
+			.swiper-wrapper
+				.swiper-slide
+					.gallery-slide
+						picture
+							source(srcset="./img/gallery-w375.webp 1x, ./img/gallery-w375@2x.webp 2x"  media="(max-width: 1023px)")
+							img(src='./img/gallery.webp', srcset='./img/gallery@2x.webp 2x' width='988' height='560' loading='lazy' alt='img')
+				.swiper-slide
+					.gallery-slide
+						picture
+							source(srcset="./img/gallery-w375.webp 1x, ./img/gallery-w375@2x.webp 2x"  media="(max-width: 1023px)")
+							img(src='./img/gallery.webp', srcset='./img/gallery@2x.webp 2x' width='988' height='560' loading='lazy' alt='img')
+				.swiper-slide
+					.gallery-slide
+						picture
+							source(srcset="./img/gallery-w375.webp 1x, ./img/gallery-w375@2x.webp 2x"  media="(max-width: 1023px)")
+							img(src='./img/gallery.webp', srcset='./img/gallery@2x.webp 2x' width='988' height='560' loading='lazy' alt='img')
+				.swiper-slide
+					.gallery-slide
+						picture
+							source(srcset="./img/gallery-w375.webp 1x, ./img/gallery-w375@2x.webp 2x"  media="(max-width: 1023px)")
+							img(src='./img/gallery.webp', srcset='./img/gallery@2x.webp 2x' width='988' height='560' loading='lazy' alt='img')
+				.swiper-slide
+					.gallery-slide
+						picture
+							source(srcset="./img/gallery-w375.webp 1x, ./img/gallery-w375@2x.webp 2x"  media="(max-width: 1023px)")
+							img(src='./img/gallery.webp', srcset='./img/gallery@2x.webp 2x' width='988' height='560' loading='lazy' alt='img')
+			
+			.swiper-pagination
+
