@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			const itemContent = item.querySelector('.transform-card-content');
 			
 			itemButton.addEventListener('click', ()=>{
+        console.log('555');
 				if(item.classList.contains('is-open')){
 					item.classList.remove('is-open');
 					if(window.innerWidth > 767){
@@ -223,7 +224,6 @@ Fancybox.bind('[data-fancybox="search"]', {
     
   }
 });
-
 
 document.addEventListener("click", (e) => {
   if (e.target.closest("#popup-close")) {

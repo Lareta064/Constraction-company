@@ -1,0 +1,23 @@
+@use '../base/_var' as *;
+/*===== PRICE =====*/
+.strip-list{
+	display: flex;
+	flex-direction: column;
+	row-gap: remy(10);
+	&-item{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		column-gap: remy(30);
+		background: var(--white-bg);
+		border-radius: remy(12);
+		padding: remy(14);
+		.medi-16{
+			white-space: nowrap;
+			flex-shrink: 0;
+		}
+		.bold-16{
+			flex-grow: 1;
+		}
+	}
+}

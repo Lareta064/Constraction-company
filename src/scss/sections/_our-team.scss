@@ -8,7 +8,6 @@
 	 flex-direction: column-reverse;
 	 gap:remy(20);
 	}
-
 }
 .our-team-media{
 	width: 48.6%;
@@ -16,23 +15,26 @@
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
+	max-height: remy(530);
+	aspect-ratio:606/520;
 	.image-front{
 		position: absolute;
-		top:54%;
+		bottom:0;
 		left: 0;
 		z-index: 2;
 		width: 49%;
 		display: block;
 		img{
 			aspect-ratio:352/239;
-			width: 100%;
-			 object-fit: cover;
+			width:remy(352);
+			object-fit: cover;
 		}
 		@media (max-width: 1439px) {
 		   top:49%;
 		}
 		@media (max-width: 1023px) {
 		  position: relative;
+		  width:100%;
 		
 		}
 	}
@@ -48,6 +50,7 @@
 	.h2.visible-mobile{display: none;}
 	@media (max-width:1023px) {
 		width: 100%;
+		max-height: unset;
 		display: flex;
 		flex-direction: column;
 		gap:remy(20);
@@ -65,15 +68,9 @@
 	flex-direction: column;
 	justify-content: center;
 	gap:remy(40);
-	padding-block: remy(70);
 	
-	@media (max-width: 1439px) {
-	   padding-block: remy(40);
-	   gap:remy(20);
-	}
-	@media (max-width: 1199px) {
-	  padding-block: 0;
-	}
+	@media (max-width: 1439px) { gap:remy(20);}
+	
 	@media (max-width: 1023px) {
 		max-width: 100%;
 	  .h2{display: none;}
@@ -81,4 +78,28 @@
 	@media (max-width: 767px) {
 	.btn-primary{width: 100%;}
 	}
+}
+.marker-strip-list{
+	display: flex;
+	flex-direction: column;
+	row-gap: remy(10);
+}
+.marker-strip-item{
+	width: 100%;
+	border-radius: remy(10);
+	padding: remy(30);
+	background-color: var(--white-bg);
+	display: flex;
+	column-gap: remy(20);
+	.marker-strip-icon{
+		width: remy(32);
+		height: remy(32);
+		border-radius: remy(30);
+		background-color: var(--accent1);
+		padding: remy(6);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 }

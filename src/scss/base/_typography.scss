@@ -57,6 +57,7 @@
 	justify-content: space-between;
 	column-gap: remy(20);
 }
+.header-block.txt-center{justify-content: center;}
 .visible-desktop{
 	display: block;
 	@media (max-width:767px) {

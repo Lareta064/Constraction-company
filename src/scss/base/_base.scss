@@ -133,7 +133,7 @@ input::placeholder, textarea::placeholder{
 	font-size: inherit;
 }
 
-.container{
+.container, .container-narrow{
 	width: 100%;
 	max-width: remy(1496);
 	margin-inline: auto;
@@ -146,6 +146,15 @@ input::placeholder, textarea::placeholder{
 		padding-left: remy(30);
 		padding-right: remy(30);
 	}
+	@media (max-width: 1023px) {
+		padding-left: remy(20);
+		padding-right: remy(20);
+	}
+}
+.container-narrow{
+	max-width: remy(988);
+	padding-left: 0;
+	padding-right: 0;
 	@media (max-width: 1023px) {
 		padding-left: remy(20);
 		padding-right: remy(20);
