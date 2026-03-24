@@ -1,5 +1,14 @@
 @use '../base/_var' as *;
 /*===== SINGLE SERVICE PAGE =====*/
 .sidebar-grid{
-	
+	display: grid;
+	grid-template-columns: remy(353) 1fr;
+}
+.sidebar-menu{
+	.menu-submenu {
+		padding-block: 0;
+	}
+	.menu-submenu .submenu-link{
+		padding-block: remy(20);
+	}
 }
