@@ -41,19 +41,14 @@ input[type="search"]::-webkit-search-cancel-button {
 	.medi-12{color: var(--error);}
 }
 .form-wrapper{
-	width: remy(479);
+	
 	flex-shrink: 0;
 	form{
 		display: flex;
 		flex-direction: column;
 		gap: remy(10);
 	}
-	@media (max-width: 1199px) {
-	  width: remy(350);
-	}
-	@media (max-width: 767px) {
-	  width: 100%;
-	}
+	
 }
 
 .form-wrapper-transparent{

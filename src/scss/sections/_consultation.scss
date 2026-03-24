@@ -3,12 +3,29 @@
 .consultation-content{
 	justify-content: space-between;
 	align-items: center;
-	.consultation-text{max-width: remy(606);
+	.consultation-text{max-width: remy(606);}
+	.form-wrapper{
+		width: remy(479);
+		
+		form{
+			display: flex;
+			flex-direction: column;
+			gap: remy(10);
+		}
+		@media (max-width: 1199px) {
+		  width: remy(350);
+		}
+		@media (max-width: 767px) {
+		  width: 100%;
+		}
 	}
+
+	
 }
 .consultation.primary-section{
 	.form-wrapper{
 		padding-block: remy(26);
+		width: remy(479);
 	}
 }
 .consultation-content.accent-section{
