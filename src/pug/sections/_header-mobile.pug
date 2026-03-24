@@ -74,4 +74,37 @@ header.header.header-mobile
 						a(href="#!").submenu-link Объекты
 
 			.mobile-menu-bottom
-				
+				//address
+				.company-address.medi-12
+					address.address-text
+						svg.svg-pin
+							use(href='./img/sprite.svg#svg-pin')
+						span Саратовская область, г. Энгельс ул. Полиграфическая, 79
+				//social
+				.social-block
+					a(href="#!").social-item
+						svg.svg-whatsapp
+							use(href='./img/social-icons.svg#svg-whatsapp')
+					
+					a(href="#!").social-item
+						svg.svg-max
+							use(href='./img/social-icons.svg#svg-max')
+					
+					a(href="#!").social-item
+						svg.svg-telegram
+							use(href='./img/social-icons.svg#svg-telegram')
+				//phone group
+				.phone-group
+					p.medi-12.work-mode
+						svg.svg-clock
+							use(href='./img/sprite.svg#svg-clock')
+						span Работаем: Пн - Пт с 9 до 18
+					a(href="tel:+79271334344").phone-link.bold-18
+						svg.svg-phone
+							use(href='./img/sprite.svg#svg-phone')
+						span +7 (927) 133-43-44
+				//btn
+				button(type="button" data-fancybox="form-popup" data-src="#form-popup").btn-outline
+					span Получить прайс
+					svg.svg-book
+						use(href='./img/sprite.svg#svg-book')
