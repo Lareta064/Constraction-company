@@ -33,6 +33,7 @@
 		img{
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
 		}
 	}
 	&__text{
@@ -99,5 +100,27 @@
 	.transform-card-btn .is-open-hide{display: none;}
 	.transform-card-btn svg{
 		transform: rotate(180deg);
+	}
+}
+.services-column.rows-gap-30{
+	 gap: remy(30);
+}
+.services-content.two-columns{
+	.services-img{
+		aspect-ratio:733/495;
+		max-width: remy(733);
+		img{
+			width: 100%;
+			aspect-ratio:733/495;
+			border-radius: remy(12);
+			
+			object-fit: cover;
+		}
+	}
+	@media (max-width: 992px) {
+		grid-template-columns: 1fr;
+		gap: remy(20);
+		&>*{width: 100%;}
+		.services-img{display: flex;justify-content: center;}
 	}
 }

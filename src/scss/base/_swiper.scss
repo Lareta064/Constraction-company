@@ -15,10 +15,9 @@
 }
 .swiper{
 	img{border-radius: remy(12);}
-	
 }
 .has-swiper .swiper{
-	padding-bottom: 70px;
+	padding-bottom: 50px;
 	@media (max-width: 767px) {
 	padding-bottom: 40px;
 	}

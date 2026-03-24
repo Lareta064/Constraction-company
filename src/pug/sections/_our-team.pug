@@ -13,7 +13,9 @@ section.our-team
 			.our-team-media
 				h2.h2.visible-mobile Наша команда
 				.image-back
-					img.bor-radius(src='./img/about.webp', srcset='./img/about@2x.webp 2x' width='606' height='398' loading='lazy' alt='img')
+					picture
+						source(srcset="./img/about-w375.webp 1x, ./img/about-w375@2x.webp 2x"  media="(max-width: 767px)")
+						img.bor-radius(src='./img/about.webp', srcset='./img/about@2x.webp 2x' width='606' height='398' loading='lazy' alt='img')
 				
 				a( href="https://www.youtube.com/watch?v=PUdyuKaGQd4"   data-fancybox="team-video"  data-width="100%"   data-height="100%").image-front.has-video
 					img.bor-radius(src='./img/about2.webp', srcset='./img/about2@2x.webp 2x' width='352' height='239' loading='lazy' alt='img')

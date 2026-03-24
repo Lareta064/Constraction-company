@@ -80,3 +80,19 @@ svg{display: inline-block; transition: .3s;flex-shrink:0 }
 	height: remy(14);
 	color: var(--header-text-color);
 }
+.svg-sertif{
+	width: remy(31);
+	height: remy(30);
+	color: var(--white);
+}
+.round-icon{
+	border-radius: 50%;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--accent1);
+	width: remy(68);
+	height: remy(68);
+	
+}
