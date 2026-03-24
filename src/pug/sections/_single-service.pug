@@ -15,71 +15,80 @@ section.single-service
 			//SIDEBAR
 			.sidebar-column
 				//MENU
-				ul.menu-submenu.js-drop.sidebar-menu(data-mode='single')
-					li.submenu-item.js-drop-item.js-drop-item-active
-						span.submenu-link.js-drop-button Услуги по благоустройству
-							svg.svg-carret-down
-								use(href='./img/sprite.svg#svg-carret-down')
-						.js-drop-body
-							ul.menu-sub-submenu.js-drop-content
-								li.sub-submenu-item
-									a(href='#!') Асвальтирование
-								li.sub-submenu-item
-									a(href='#!') Укладка тротуарной плитки
-								li.sub-submenu-item
-									a(href='#!') Озеленение
-					li.submenu-item.js-drop-item
-						span.submenu-link.js-drop-button Аренда спецтехники
-							svg.svg-carret-down
-								use(href='./img/sprite.svg#svg-carret-down')
-						.js-drop-body
-							ul.menu-sub-submenu.js-drop-content
-								li.sub-submenu-item
-									a(href='#!') Асвальтирование
-								li.sub-submenu-item
-									a(href='#!') Укладка тротуарной плитки
-								li.sub-submenu-item
-									a(href='#!') Озеленение
-					
-					li.submenu-item.js-drop-item
-						span.submenu-link.js-drop-button Бетонные полы
-							svg.svg-carret-down
-								use(href='./img/sprite.svg#svg-carret-down')
-						.js-drop-body
-							ul.menu-sub-submenu.js-drop-content
-								li.sub-submenu-item
-									a(href='#!') Асвальтирование
-								li.sub-submenu-item
-									a(href='#!') Укладка тротуарной плитки
-								li.sub-submenu-item
-									a(href='#!') Озеленение
+				.expand-btn.visible-mobile(data-btn="sidebar-menu")
+					.bold-18 Услуги
+					svg.svg-carret-down
+						use(href='./img/sprite.svg#svg-carret-down')
+				.expand-drop( data-drop="sidebar-menu")
+					ul.menu-submenu.js-drop.sidebar-menu(data-mode='single')
+						li.submenu-item.js-drop-item.js-drop-item-active
+							span.submenu-link.js-drop-button Услуги по благоустройству
+								svg.svg-carret-down
+									use(href='./img/sprite.svg#svg-carret-down')
+							.js-drop-body
+								ul.menu-sub-submenu.js-drop-content
+									li.sub-submenu-item
+										a(href='#!') Асвальтирование
+									li.sub-submenu-item
+										a(href='#!') Укладка тротуарной плитки
+									li.sub-submenu-item
+										a(href='#!') Озеленение
+						li.submenu-item.js-drop-item
+							span.submenu-link.js-drop-button Аренда спецтехники
+								svg.svg-carret-down
+									use(href='./img/sprite.svg#svg-carret-down')
+							.js-drop-body
+								ul.menu-sub-submenu.js-drop-content
+									li.sub-submenu-item
+										a(href='#!') Асвальтирование
+									li.sub-submenu-item
+										a(href='#!') Укладка тротуарной плитки
+									li.sub-submenu-item
+										a(href='#!') Озеленение
+						
+						li.submenu-item.js-drop-item
+							span.submenu-link.js-drop-button Бетонные полы
+								svg.svg-carret-down
+									use(href='./img/sprite.svg#svg-carret-down')
+							.js-drop-body
+								ul.menu-sub-submenu.js-drop-content
+									li.sub-submenu-item
+										a(href='#!') Асвальтирование
+									li.sub-submenu-item
+										a(href='#!') Укладка тротуарной плитки
+									li.sub-submenu-item
+										a(href='#!') Озеленение
 					
 				//FORM
 				.form-wrapper.form-wrapper-transparent
-					.bold-16 Оформить заявку
-					form.feedback-form
-						.form-item
-							input.form-inp.txt-overflow(type="text" value="Работы по асфальтированию в Саратове и Саратовской области")
-						.form-item
-							input.form-inp(type="text" placeholder="Имя" required)
-						.form-item
-							input.form-inp(type="text" placeholder="Телефон" required)
-						.form-item
-							textarea.form-text(placeholder="Задайте вопрос")
-						
-						label.form-agree
-							.custom-label
-								input(type="checkbox" name="agree_input")
-								span.fake-checkbox
+					.expand-btn(data-btn="sidebar-form")
+						.bold-18 Оформить заявку
+						svg.svg-carret-down
+							use(href='./img/sprite.svg#svg-carret-down')
+					.expand-drop(data-drop="sidebar-form")
+						form.feedback-form
+							.form-item
+								input.form-inp.txt-overflow(type="text" value="Работы по асфальтированию в Саратове и Саратовской области")
+							.form-item
+								input.form-inp(type="text" placeholder="Имя" required)
+							.form-item
+								input.form-inp(type="text" placeholder="Телефон" required)
+							.form-item
+								textarea.form-text(placeholder="Задайте вопрос")
 							
-							span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
-						button.btn-primary.w-100(type="button")
-							span Отправить
-							svg.svg-email
-								use(href='./img/sprite.svg#svg-email')
+							label.form-agree
+								.custom-label
+									input(type="checkbox" name="agree_input")
+									span.fake-checkbox
+								
+								span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+							button.btn-primary.w-100(type="button")
+								span Отправить
+								svg.svg-email
+									use(href='./img/sprite.svg#svg-email')
 			//RIGHT CONTENT
-			.content-column
-				.single-service-description.rows-gap-20
+			.content-column.gap-60
+				.single-service-description.gap-20
 					h1.h5 Работы по&nbsp;асфальтированию в&nbsp;Саратове и&nbsp;Саратовской области
 					.fotorama-wrapper
 						.single-service.swiper.swiper-display
@@ -158,3 +167,41 @@ section.single-service
 							span.is-open-show Свернуть
 							svg.svg-carret-down
 								use(href='./img/sprite.svg#svg-carret-down')
+
+				//WORK RESULTS
+				section.work-results.gap-30
+
+					.header-block
+						h2.h5 Результаты работ
+					.work-results-content
+						//single row
+						.work-result-item
+							a(href="./img/result1.webp" data-fancybox="gallery").result-card
+								.label Было
+								picture
+									source(srcset="./img/result1-w375.webp 1x, ./img/result1-w375@2x.webp 2x"  media="(max-width: 767px)")
+									img(src='./img/result1.webp', srcset='./img/result1@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+
+							a(href="./img/result11.webp" data-fancybox="gallery").result-card
+								.label Стало
+								picture
+									source(srcset="./img/result11-w375.webp 1x, ./img/result11-w375@2x.webp 2x"  media="(max-width: 767px)")
+									img(src='./img/result11.webp', srcset='./img/result11@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+						//single row
+						.work-result-item
+							a(href="./img/result2.webp" data-fancybox="gallery").result-card
+								.label Было
+								picture
+									source(srcset="./img/result2-w375.webp 1x, ./img/result2-w375@2x.webp 2x"  media="(max-width: 767px)")
+									img(src='./img/result2.webp', srcset='./img/result2@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+
+							a(href="./img/result22.webp" data-fancybox="gallery").result-card
+								.label Стало
+								picture
+									source(srcset="./img/result22-w375.webp 1x, ./img/result22-w375@2x.webp 2x"  media="(max-width: 767px)")
+									img(src='./img/result22.webp', srcset='./img/result22@2x.webp 2x' width='733' height='480' loading='lazy' alt='img')
+					.buttons-wrapper
+						button.btn-dark(type="button")
+							span Загрузить еще
+							svg.svg-plus
+								use(href='./img/sprite.svg#svg-plus')

@@ -234,4 +234,7 @@ input::placeholder, textarea::placeholder{
 		color: var(--accent1);
 	}
   }
+  @media (max-width: 1023px) {
+  margin-bottom: remy(40);
+  }
 }

@@ -299,20 +299,49 @@ document.addEventListener("click", (e) => {
   }
 });
 	function updateCounter(fancybox) {
-	let counter = fancybox.container.querySelector(".my-fancybox-counter");
+      let counter = fancybox.container.querySelector(".my-fancybox-counter");
 
-	if (!counter) {
-		counter = document.createElement("div");
-		counter.className = "my-fancybox-counter";
-		fancybox.container.appendChild(counter);
-	}
+      if (!counter) {
+        counter = document.createElement("div");
+        counter.className = "my-fancybox-counter";
+        fancybox.container.appendChild(counter);
+      }
 
-	const index = fancybox.getSlide()?.index ?? 0;
-	const total = fancybox.Carousel?.slides?.length ?? 0;
+      const index = fancybox.getSlide()?.index ?? 0;
+      const total = fancybox.Carousel?.slides?.length ?? 0;
 
-	counter.textContent = `${index + 1} / ${total}`;
-	}
-});
+      counter.textContent = `${index + 1} / ${total}`;
+      }
+
+    /*sidebar movile click */
+    const dataBtns = document.querySelectorAll('[data-btn]');
+    
+    if(dataBtns.length > 0){
+       const dataDrops = document.querySelectorAll('[data-drop]');
+       dataBtns.forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+         
+          const btnData = btn.getAttribute('data-btn');
+          
+           dataDrops.forEach((drop)=>{
+              const dropData = drop.getAttribute('data-drop');
+              if(btnData == dropData){
+               
+               
+                  if( btn.classList.contains('active')){
+                    btn.classList.remove('active');
+                     drop.classList.remove('active');
+                  }else{
+                    btn.classList.add('active');
+                    drop.classList.add('active');
+                  }
+              }
+           });           
+        });
+       });
+    }
+  
+  });
 (() => {
   const wrappers = document.querySelectorAll('.acordion-wrapper');
   if (!wrappers.length) return;

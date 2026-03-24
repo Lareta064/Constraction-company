@@ -120,17 +120,25 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 .gap-40{gap: remy(40);}
-.rows-gap-10,
-.rows-gap-20, .rows-gap-30{
+.rows-gap-10,.gap-20,
+.rows-gap-20, .rows-gap-30,.gap-30, .gap-60{
 	display: flex;
 	flex-direction: column;
 	row-gap: remy(10);
 }
-.rows-gap-20{
+.rows-gap-20,.gap-20{
 	row-gap: remy(20);
+}
+.rows-gap-20{
 	@media (max-width: 767px) {
-	row-gap: remy(10);
+	  row-gap: remy(10);
 	}
+}
+.gap-30{
+ row-gap: remy(30);
+ @media (max-width: 767px) {
+ row-gap: remy(20);
+ }
 }
 .rows-gap-30{
 	row-gap: remy(30);
@@ -139,6 +147,12 @@
 	}
 	@media (max-width: 767px) {
 	row-gap: remy(10);
+	}
+}
+.gap-60{
+	row-gap: remy(60);
+	@media (max-width: 767px) {
+	row-gap: remy(40);
 	}
 }
 .no-wrap {white-space: nowrap;}
@@ -196,12 +210,14 @@
 }
 @media (max-width: 1364px) {
   .h1,.h2{font-size: remy(40);}
+  .h5{font-size: remy(24);}
 }
 @media (max-width: 1199px) {
    .h1,.h2{font-size: remy(38);}
 }
 @media (max-width: 1023px) {
 .h1,.h2{font-size: remy(34);}
+.h5{font-size: remy(20);}
 }
 @media (max-width: 767px) {
 	.h1,.h2{font-size: remy(32);}
