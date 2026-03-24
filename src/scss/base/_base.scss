@@ -198,3 +198,9 @@ input::placeholder, textarea::placeholder{
 		}
 	}
 }
+.breadcrumbs{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}

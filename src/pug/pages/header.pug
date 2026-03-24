@@ -2,37 +2,6 @@ extends ../layouts/layout.pug
 
 block content
 	header.header
-		//HEADER TOP
-		.header-top
-			.container
-				//left col
-				.header-top-left
-					.company-address.medi-12
-						address.address-text
-							svg.svg-pin
-								use(href='./img/sprite.svg#svg-pin')
-							span Саратовская область, г. Энгельс ул. Полиграфическая, 79 
-						
-						p.company-direction Cтроительство объектов, производство и благоустройство на всей территории Саратова и области
-				
-				
-				//right col
-				.header-top-right
-					.header-top-phone
-						p.medi-12.work-mode
-							svg.svg-clock
-								use(href='./img/sprite.svg#svg-clock')
-							span Работаем: Пн - Пт с 9 до 18
-						a(href="tel:+79271334344").phone-link.bold-18
-							svg.svg-phone
-								use(href='./img/sprite.svg#svg-phone')
-							span +7 (927) 133-43-44
-					
-					a(href="#!").btn-outline
-						span Получить прайс
-						svg.svg-book
-							use(href='./img/sprite.svg#svg-book')
-
 		//HEADER BOTTOM
 		.header-bottom
 			.container
@@ -64,34 +33,7 @@ block content
 													li.sub-submenu-item
 														a(href='#!') Озеленение
 										
-										li.submenu-item.js-drop-item
-											span.submenu-link.js-drop-button Аренда спецтехники
-												svg.svg-carret-down
-													use(href='./img/sprite.svg#svg-carret-down')
-											.js-drop-body
-												ul.menu-sub-submenu.js-drop-content
-													li.sub-submenu-item
-														a(href='#!') Аренда бульдозера
-													li.sub-submenu-item
-														a(href='#!') Аренда мини- погрузчика
-													li.sub-submenu-item
-														a(href='#!') Аренда катка
 										
-										li.submenu-item.js-drop-item
-											span.submenu-link.js-drop-button Бетонные полы
-												svg.svg-carret-down
-													use(href='./img/sprite.svg#svg-carret-down')
-											.js-drop-body
-												ul.menu-sub-submenu.js-drop-content
-													li.sub-submenu-item
-														a(href='#!') Бетонные полы
-													li.sub-submenu-item
-														a(href='#!') Топ бетон
-													li.sub-submenu-item
-														a(href='#!') Мозаичные полы
-													li.sub-submenu-item
-														a(href='#!') Шлифование бетонных полов
-							
 							li.menu-item.has-submenu
 								.menu-link
 									a(href='#!') Аренда спецтехники
@@ -116,12 +58,7 @@ block content
 									ul.menu-submenu
 										li.submenu-item
 											a.submenu-link(href='#!') Бетонные полы
-										li.submenu-item
-											a.submenu-link(href='#!') Топ бетон
-										li.submenu-item
-											a.submenu-link(href='#!') Мозаичные полы
-										li.submenu-item
-											a.submenu-link(href='#!') Шлифование бетонных полов
+										
 							
 							li.menu-item
 								.menu-link

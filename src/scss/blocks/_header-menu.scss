@@ -1,6 +1,6 @@
 @use '../base/_var' as *;
 /*HEADER MENU*/
-.header-desktop-menu{}
+
 .menu-list{
 display: flex;
 justify-content: center;
@@ -104,3 +104,34 @@ column-gap:remy(20);
 	transform: rotate(180deg);
 }
 .submenu-item.js-drop-item-active + .submenu-item .submenu-link{padding-top: 20px;}
+
+.menu-item--more {
+	position: relative;
+	display: none; // по умолчанию скрыт
+	flex-shrink: 0;
+}
+/*.menu-more-btn*/
+.menu-more-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: remy(40);
+	height: remy(24);
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	padding: 0;
+	font-size: remy(22);
+	line-height: 1;
+	font-weight: 500;
+	color: var(--primary);
+	transition: .3s;
+}
+
+.menu-more-btn:hover {
+	color: var(--accent1);
+}
+
+.menu-more-list {
+	min-width: remy(220);
+}

@@ -1,0 +1,18 @@
+@use '../base/_var' as *;
+/*HEADER*/
+
+.header-bottom .container{
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	column-gap: remy(40);
+	padding-block: remy(20);
+	
+}
+.header-bottom .logo-block,
+.header-bottom .header-bottom-right{
+	display: flex;
+	align-items: center;
+	column-gap: remy(20);
+}
+
+

@@ -30,8 +30,8 @@
 .header{
 	background: var(--body-bg);
 	.logo-block{
-		flex-shrink: 0;
-	}
+			flex-shrink: 0;
+		}
 }
 
 .header-top-phone{
@@ -59,18 +59,19 @@
 }
 .header-top .container,
 .header-top-right, .header-top-left,
+.header-bottom .container,
+.header-bottom .logo-block,
+.header-bottom .header-bottom-right{
+	display: flex;
+	align-items: center;
+	column-gap: remy(20);
+}
 .header-bottom .container{
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	column-gap: remy(40);
 	padding-block: remy(20);
 	
-}
-.header-bottom .logo-block,
-.header-bottom .header-bottom-right{
-	display: flex;
-	align-items: center;
-	column-gap: remy(20);
 }
 .header-bottom .header-bottom-right{column-gap: remy(10);}
 
