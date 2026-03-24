@@ -56,12 +56,17 @@ section.single-service
 					
 				//FORM
 				.form-wrapper.form-wrapper-transparent
-					.bold-16 Консультация по телефону
+					.bold-16 Оформить заявку
 					form.feedback-form
+						.form-item
+							input.form-inp(type="text" value="Работы по асфальтированию в Саратове и Саратовской области")
 						.form-item
 							input.form-inp(type="text" placeholder="Имя" required)
 						.form-item
 							input.form-inp(type="text" placeholder="Телефон" required)
+						.form-item
+							textarea.form-text(placeholder="Задайте вопрос")
+						
 						label.form-agree
 							.custom-label
 								input(type="checkbox" name="agree_input")
@@ -69,8 +74,8 @@ section.single-service
 							
 							span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
 						button.btn-primary.w-100(type="button")
-							span Жду звонка
-							svg.svg-round-check
-								use(href='./img/sprite.svg#svg-round-check')
+							span Отправить
+							svg.svg-email
+								use(href='./img/sprite.svg#svg-email')
 			//RIGHT CONTENT
 			.content-column

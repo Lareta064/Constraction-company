@@ -12,3 +12,9 @@
 		padding-block: remy(20);
 	}
 }
+.sidebar-column{
+	display: flex;
+	flex-direction: column;
+	row-gap: remy(40);
+	&>*{width: 100%;}
+}
