@@ -36,6 +36,10 @@ input[type="search"]::-webkit-search-cancel-button {
 		padding: remy(11) remy(16);
 	}
 }
+.txt-overflow{
+	text-overflow: ellipsis;
+}
+
 .form-item.form-item-invalid{
 	input.form-inp, textarea.form-text{border: 1px solid var(--error);}
 	.medi-12{color: var(--error);}
