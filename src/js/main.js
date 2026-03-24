@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const bodyEl = document.body;
+
+    /*open mobile menu */
+    const menuButton = document.querySelector('#menu-toggle');
+    const mobileMenu = document.querySelector('#header-menu-mobile');
+    if(mobileMenu){
+		function closeMobileMenu(){
+			menuButton.classList.remove('active');
+			mobileMenu.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		}
+		menuButton.addEventListener('click', ()=> {
+		
+		if( menuButton.classList.contains('active')){
+			closeMobileMenu();
+			
+		}else{
+			menuButton.classList.add('active');
+			mobileMenu.classList.add('active');
+			bodyEl.classList.add('lock');
+		}
+		});
+
+		const mobileMenuLinks = mobileMenu.querySelectorAll('.header-menu__item');
+		mobileMenuLinks.forEach((item)=>{
+			item.addEventListener('click',()=>{ closeMobileMenu()});
+		});
+		 mobileMenu.addEventListener('click', (e)=>{
+			if( mobileMenu == e.target){closeMobileMenu();}
+		 })
+	}
+
+  /*transform-card*/
 	const transformCards = document.querySelectorAll('.transform-card');
 	if(transformCards.length>0){
 		transformCards.forEach((item) =>{

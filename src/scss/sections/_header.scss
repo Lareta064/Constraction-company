@@ -1,5 +1,17 @@
 @use '../base/_var' as *;
 /*HEADER*/
+.header.header-desktop{
+	display: block;
+	@media (max-width: 1023px) {
+	  display: none!important;
+	}
+}
+.header.header-mobile{
+	display:  none;
+	@media (max-width: 1023px) {
+	  display: block;
+	}
+}
 .company-address{
   color: var(--header-text-color);
   &>*+*{margin-top: remy(6);}
@@ -17,8 +29,7 @@
 			height: auto;
 			max-height: remy(54);
 			object-fit: contain;
-		}
-	    
+		}	    
 	}
 }
 .medi-12.work-mode{
@@ -29,9 +40,7 @@
 }
 .header{
 	background: var(--body-bg);
-	.logo-block{
-			flex-shrink: 0;
-		}
+	.logo-block{flex-shrink: 0;}
 }
 
 .header-top-phone{

@@ -1,0 +1,15 @@
+header.header.header-mobile
+	.container
+		.header-mobile-row
+			.logo-box
+				a(href="#!").logo
+					img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='214' height='52' loading='lazy' alt='img')
+			
+			.header-bottom-right
+				button.open-search.btn-square(data-fancybox="search"  data-src="#search-block")
+					svg.svg-search
+						use(href='./img/sprite.svg#svg-search')
+			//menu-toggle
+			button.menu-toggle#menu-toggle
+				span
+	#header-menu-mobile.header-mobile-menu
