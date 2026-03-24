@@ -244,6 +244,11 @@ Fancybox.bind('[data-fancybox="form-popup"]', {
       bounce: false,
     },
   },
+  on: {
+   ready: (fancybox) => {
+      fancybox.container.classList.add("fancybox-form");
+    },
+  }
 });
 Fancybox.bind('[data-fancybox="search"]', {
     Thumbs: false,
@@ -268,7 +273,6 @@ Fancybox.bind('[data-fancybox="search"]', {
    ready: (fancybox) => {
       fancybox.container.classList.add("fancybox-search");
     },
-    
   }
 });
 

@@ -56,6 +56,7 @@
 	.form-inp{
 		flex-grow:1;
 	}
+	.fancybox__nav{display: none!important;}
 	@media (max-width: 767px) {
 		.btn-primary{
 			padding-left: remy(10);
@@ -65,7 +66,7 @@
 	 	.btn-primary span{display: none;}
 	}
 }
-
+.fancybox-form .fancybox__nav{display: none!important;}
 .search-results-wrapper{
 	display: grid;
 	grid-template-columns: remy(355) 1fr;

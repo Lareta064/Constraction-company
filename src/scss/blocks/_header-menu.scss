@@ -146,23 +146,27 @@ column-gap:remy(20);
 .header-bottom .container{
 	display: grid;
 	grid-template-columns: 270px 1fr 300px;
-	column-gap: remy(40);
+	// column-gap: remy(40);
 	padding-block: remy(20);
 }
 .header-menu {
 	display: flex;
-	justify-content: center;
-	width: 100%;
-	min-width: 0;
+	// justify-content: center;
+	// width: 100%;
+	// min-width: 0;
 }
 .menu-list {
 	display: flex;
 	justify-content: flex-start;
-	width: 100%;
+	// width: 100%;
+	
 	min-width: 0;
 	flex-wrap: nowrap;
 	// overflow: hidden;
 	column-gap: remy(20);
+	margin-right: remy(40);
+	margin-left: remy(40);
+	
 }
 .menu-more-dots{
 padding-bottom: 14px;
