@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-content
+		include ../sections/_header.pug
+		main.inner-page
+			include ../sections/_contacts.pug
+			
+		include ../sections/_footer.pug
+			
+block variables
+	-var title = "Home";

@@ -164,6 +164,7 @@
 .txt-muted{color: var(--secondary);}
 .txt-second, .link-second{color: var(--secondary1);}
 .link-second:hover{color: var(--white);}
+.txt-upper{text-transform: uppercase;}
 .link-underline{
 	display: inline;
 	text-decoration: underline;
@@ -315,6 +316,7 @@
 		li::marker{
 			color: var(--accent1);
 			line-height: 1;
+		}
 		li{
 			h1,h2,h3,h4,h5,h6{margin-bottom: remy(10);}
 			padding-left: remy(5);

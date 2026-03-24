@@ -1,0 +1,15 @@
+@use '../base/_var' as *;
+/*===== CONTACTS =====*/
+.our-contacts-content{
+	display: grid;
+	grid-template-columns: remy(400) 1fr;
+	column-gap: remy(30);
+}
+.contacts-list-item{
+	display: flex;
+	flex-direction: column;
+	gap: remy(10);
+}
+.contacts-list-item .icon-text svg{
+	color: var(--primary);
+}

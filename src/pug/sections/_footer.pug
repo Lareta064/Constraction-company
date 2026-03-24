@@ -40,19 +40,23 @@ footer.footer.primary-bg
 		.footer-center
 			.container
 				.footer-contacts
-					.contacts-list
-						.contacts-item
-							svg.svg-pin
-								use(href='./img/sprite.svg#svg-pin')
-							span.font-16 Саратовская область, г. Энгельс ул. Полиграфическая, 79
-						a(href="tel:+79271334344").contacts-item
-							svg.svg-phone
-								use(href='./img/sprite.svg#svg-phone')
-							span.font-16 +7 (927) 133-43-44
-						a(href="mailto:sy-72@yandex.ru").contacts-item
-							svg.svg-email
-								use(href='./img/sprite.svg#svg-email')
-							span.font-16 sy-72@yandex.ru
+					ul.contacts-list
+						li.contacts-item
+							.icon-text
+								svg.svg-pin
+									use(href='./img/sprite.svg#svg-pin')
+								span.font-16 Саратовская область, г. Энгельс ул. Полиграфическая, 79
+						
+						li.contacts-item
+							a.icon-text(href="tel:+79271334344")
+								svg.svg-phone
+									use(href='./img/sprite.svg#svg-phone')
+								span.font-16 +7 (927) 133-43-44
+						li.contacts-item
+							a.icon-text(href="mailto:sy-72@yandex.ru")
+								svg.svg-email
+									use(href='./img/sprite.svg#svg-email')
+								span.font-16 sy-72@yandex.ru
 					
 					//SOCIAL
 					.social-block.social-accent

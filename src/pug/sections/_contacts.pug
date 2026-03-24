@@ -1,0 +1,40 @@
+//single service content
+section.our-contacts
+	.container
+		ul.breadcrumbs
+			li.breadcrumb-item
+				a(href="") Главная
+			li.breadcrumb-item
+				span  Контакты
+			
+		.our-contacts-content
+			.our-contacts-column
+				h1.h2 Контакты
+				ul.contacts-list
+					li.contacts-list-item
+						.bold-18 Адрес
+						.icon-text
+							svg.svg-pin
+								use(href='./img/sprite.svg#svg-pin')
+							span.font-16 Саратовская область, г. Энгельс ул. Полиграфическая, 79
+					li.contacts-list-item
+						.bold-18 Телефоны
+						a.icon-text(href="tel:+79271334344")
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span.font-16 +7 (927) 133-43-44
+					li.contacts-list-item
+						.bold-18 E-mail
+						a.icon-text(href="mailto:sy-72@yandex.ru")
+							svg.svg-email
+								use(href='./img/sprite.svg#svg-email')
+							span.font-16 sy-72@yandex.ru
+					
+					li.contacts-list-item
+						.bold-18 Режим работы
+						.icon-text
+							svg.svg-clock
+								use(href='./img/sprite.svg#svg-clock')
+							span.font-16.txt-upper С 9.00 - 21.00 ВЫХОДНОЙ: СБ-ВС
+			.our-contacts-map
+		
