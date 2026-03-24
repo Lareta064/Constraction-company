@@ -12,9 +12,11 @@ section.single-service
 				span Асфальтирование
 		
 		.sidebar-grid
+			//SIDEBAR
 			.sidebar-column
+				//MENU
 				ul.menu-submenu.js-drop.sidebar-menu(data-mode='single')
-					li.submenu-item.js-drop-item
+					li.submenu-item.js-drop-item.js-drop-item-active
 						span.submenu-link.js-drop-button Услуги по благоустройству
 							svg.svg-carret-down
 								use(href='./img/sprite.svg#svg-carret-down')
@@ -27,7 +29,7 @@ section.single-service
 								li.sub-submenu-item
 									a(href='#!') Озеленение
 					li.submenu-item.js-drop-item
-						span.submenu-link.js-drop-button Услуги по благоустройству
+						span.submenu-link.js-drop-button Аренда спецтехники
 							svg.svg-carret-down
 								use(href='./img/sprite.svg#svg-carret-down')
 						.js-drop-body
@@ -38,5 +40,37 @@ section.single-service
 									a(href='#!') Укладка тротуарной плитки
 								li.sub-submenu-item
 									a(href='#!') Озеленение
-			
+					
+					li.submenu-item.js-drop-item
+						span.submenu-link.js-drop-button Бетонные полы
+							svg.svg-carret-down
+								use(href='./img/sprite.svg#svg-carret-down')
+						.js-drop-body
+							ul.menu-sub-submenu.js-drop-content
+								li.sub-submenu-item
+									a(href='#!') Асвальтирование
+								li.sub-submenu-item
+									a(href='#!') Укладка тротуарной плитки
+								li.sub-submenu-item
+									a(href='#!') Озеленение
+					
+				//FORM
+				.form-wrapper.form-wrapper-transparent
+					.bold-16 Консультация по телефону
+					form.feedback-form
+						.form-item
+							input.form-inp(type="text" placeholder="Имя" required)
+						.form-item
+							input.form-inp(type="text" placeholder="Телефон" required)
+						label.form-agree
+							.custom-label
+								input(type="checkbox" name="agree_input")
+								span.fake-checkbox
+							
+							span.medi-14 Согласен (на) на #[a.link-underline(href="#") обработку персональных данных]
+						button.btn-primary.w-100(type="button")
+							span Жду звонка
+							svg.svg-round-check
+								use(href='./img/sprite.svg#svg-round-check')
+			//RIGHT CONTENT
 			.content-column

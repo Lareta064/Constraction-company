@@ -55,6 +55,12 @@ input[type="search"]::-webkit-search-cancel-button {
 	  width: 100%;
 	}
 }
+
+.form-wrapper-transparent{
+	input.form-inp, textarea.form-text{
+		background-color: transparent;
+	}
+}
 .custom-label{
 	position: relative;
 	display: flex;
@@ -104,10 +110,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .in-accent-wrapper {
 	.custom-label .fake-checkbox{border:1px solid var(--secondary1);}
 }
+.form-wrapper>*+*{margin-top: remy(20);}
 .form-wrapper.white-card{
-	padding: 40px;
-	&>*+*{margin-top: remy(20);}
+	padding: remy(40);
 	@media (max-width: 1199px) {
-	padding: 20px;
+	  padding: remy(20);
 	}
 }
