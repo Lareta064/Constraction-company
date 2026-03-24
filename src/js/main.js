@@ -163,6 +163,23 @@ document.addEventListener('DOMContentLoaded', function() {
            spaceBetween:30,
         },
       },
+  });
+  var swiper = new Swiper(".swiper-thumbnail", {
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".swiper-display", {
+      spaceBetween: 10,
+      speed: 1000,
+      navigation: {
+        nextEl: ".swiper-display-next",
+        prevEl: ".swiper-display-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
     });
 	/*FANCYBOX */
   const galleryFancybox = document.querySelector('[data-fancybox="gallery"]');

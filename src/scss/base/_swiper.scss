@@ -9,7 +9,7 @@
 	height: remy(52);
 	background: var(--secondary2);
 	position: relative;
-	inset:0;
+	inset:unset;
 	margin: 0;
 	&:after{font-size: remy(18); color: var(--primary1)}
 }
