@@ -12,14 +12,7 @@
 	 .sidebar-column{row-gap: remy(20);}
 	}
 }
-.sidebar-menu.menu-submenu {
-	.menu-submenu {
-		padding-block: 0;
-	}
-	.submenu-link{
-		padding-block: remy(20);
-	}
-}
+
 .sidebar-column{
 	width: remy(353);
 	flex-shrink: 0;

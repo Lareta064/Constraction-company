@@ -12,7 +12,12 @@
 	}
 }
 .work-result-item +.work-result-item{
-	margin-top: remy(30)
+	margin-top: remy(30);
+}
+.work-results-content.gap-10 {
+	.work-result-item +.work-result-item{
+	margin-top: 0;
+}
 }
 .result-card{
 	border-radius: remy(12);

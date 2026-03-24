@@ -120,11 +120,14 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 .gap-40{gap: remy(40);}
-.rows-gap-10,.gap-20,
+.gap-10,.rows-gap-10,.gap-20,
 .rows-gap-20, .rows-gap-30,.gap-30, .gap-60{
 	display: flex;
 	flex-direction: column;
 	row-gap: remy(10);
+}
+.gap-10{
+	gap:remy(10)!important;
 }
 .rows-gap-20,.gap-20{
 	row-gap: remy(20);
@@ -221,7 +224,7 @@
 }
 @media (max-width: 767px) {
 	.h1,.h2{font-size: remy(32);}
-	.header-block{flex-direction: column;}
+	.header-block{flex-direction: column; align-items: flex-start;}
 	.gap-40{gap: remy(20);}
 	.bold-24{font-size: remy(18);}
 }
@@ -311,13 +314,14 @@
 		margin-left: remy(20);
 		li::marker{
 			color: var(--accent1);
-		}
+			line-height: 1;
 		li{
 			h1,h2,h3,h4,h5,h6{margin-bottom: remy(10);}
 			padding-left: remy(5);
 		}
 		li+li{margin-top: remy(4);}
 	}
+	
 	ol{
 		list-style-type: decimal;
 		li::marker{
@@ -337,7 +341,7 @@
 	font-weight: 500;
 	font-size: remy(16);
 	color: var(--accent1);
-	padding-inline: remy(10);
+	padding-inline: remy(16);
 	@media (max-width: 1023px) {
 	  border-radius: remy(6);
 	  height: remy(25);
