@@ -202,5 +202,31 @@ input::placeholder, textarea::placeholder{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  
+  gap: remy(10);
+  .breadcrumb-item{
+	display: flex;
+	align-items: center;
+  }
+  .breadcrumb-item a{
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: remy(10);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 140%;
+	color: var(--secondary);
+	&:after{
+		content: '';
+		flex-shrink: 0;
+		width: 5px;
+		height: 9px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.131704 0.131802C-0.0440316 0.307538 -0.0440316 0.592462 0.131704 0.768198L3.81351 4.45L0.131704 8.1318C-0.0440316 8.30754 -0.0440316 8.59246 0.131704 8.7682C0.30744 8.94393 0.592364 8.94393 0.7681 8.7682L4.7681 4.7682C4.94384 4.59246 4.94384 4.30754 4.7681 4.1318L0.7681 0.131802C0.592364 -0.043934 0.30744 -0.043934 0.131704 0.131802Z' fill='%237C8A93' /%3e%3c/svg%3e");
+		background-size: 5px;
+	}
+	&:hover{
+		color: var(--accent1);
+	}
+  }
 }
