@@ -64,14 +64,35 @@
 .header-bottom .header-bottom-right{
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	column-gap: remy(20);
 }
+
+.header-bottom .header-bottom-right{column-gap: remy(10);}
 .header-bottom .container{
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: 270px 1fr 250px;
 	column-gap: remy(40);
 	padding-block: remy(20);
 	
 }
-.header-bottom .header-bottom-right{column-gap: remy(10);}
+.header-menu-wrapper {
+	min-width: 0;
+}
 
+.header-menu {
+	min-width: 0;
+}
+
+.menu-list {
+	min-width: 0;
+	flex-wrap: nowrap;
+}
+.header-bottom .header-bottom-right{column-gap: remy(10);}
+.menu-item.is-hidden-by-more {
+	display: none !important;
+}
+
+.menu-item--more.is-active-more {
+	display: block;
+}

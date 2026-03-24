@@ -1,10 +1,13 @@
 @use '../base/_var' as *;
 /*HEADER MENU*/
 
+@use '../base/_var' as *;
+/*HEADER MENU*/
+
 .menu-list{
 display: flex;
-justify-content: center;
-width: 100%;
+// justify-content: center;
+// width: 100%;
 column-gap:remy(20);
 .menu-item{
 	padding-top: 10px;
@@ -107,10 +110,12 @@ column-gap:remy(20);
 
 .menu-item--more {
 	position: relative;
-	display: none; // по умолчанию скрыт
+	display: none; 
 	flex-shrink: 0;
 }
-/*.menu-more-btn*/
+.menu-more-list {
+	width: remy(220);
+}
 .menu-more-btn {
 	display: flex;
 	align-items: center;
@@ -131,7 +136,34 @@ column-gap:remy(20);
 .menu-more-btn:hover {
 	color: var(--accent1);
 }
+.header-bottom .container > * {
+	min-width: 0;
+}
+.header-menu-wrapper {
+	min-width: 0;
+}
 
-.menu-more-list {
-	min-width: remy(220);
+.header-bottom .container{
+	display: grid;
+	grid-template-columns: 270px 1fr 300px;
+	column-gap: remy(40);
+	padding-block: remy(20);
+}
+.header-menu {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-width: 0;
+}
+.menu-list {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	min-width: 0;
+	flex-wrap: nowrap;
+	// overflow: hidden;
+	column-gap: remy(20);
+}
+.menu-more-dots{
+padding-bottom: 14px;
 }

@@ -128,7 +128,14 @@ header.header
 						li.menu-item
 							.menu-link
 								a(href='#!') Контакты
-			
+						
+						// overflow item
+						li.menu-item.menu-item--more.has-submenu
+							.menu-link
+								button.menu-more-btn(type="button" aria-label="Ещё")
+									span.menu-more-dots ...
+							.menu-submenu-wrapper
+								ul.menu-submenu.menu-more-list
 			//RIGHT COLUMN
 			.header-bottom-right
 				button.open-search.btn-square(data-fancybox="search"  data-src="#search-block")
