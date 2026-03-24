@@ -28,7 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 		 mobileMenu.addEventListener('click', (e)=>{
 			if( mobileMenu == e.target){closeMobileMenu();}
-		 })
+		 });
+     window.addEventListener('resize', ()=>{
+      if(window.innerWidth > 1023){
+          closeMobileMenu();
+      }
+     });
 	}
 
   /*transform-card*/
