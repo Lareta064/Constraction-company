@@ -8,7 +8,7 @@ section.our-contacts
 				span  Контакты
 			
 		.our-contacts-content
-			.our-contacts-column
+			.our-contacts-column.gap-30
 				h1.h2 Контакты
 				ul.contacts-list
 					li.contacts-list-item
@@ -23,6 +23,11 @@ section.our-contacts
 							svg.svg-phone
 								use(href='./img/sprite.svg#svg-phone')
 							span.font-16 +7 (927) 133-43-44
+						a.icon-text(href="tel:+79271334344")
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span.font-16 +7 (927) 133-43-44					
+					
 					li.contacts-list-item
 						.bold-18 E-mail
 						a.icon-text(href="mailto:sy-72@yandex.ru")
@@ -37,4 +42,5 @@ section.our-contacts
 								use(href='./img/sprite.svg#svg-clock')
 							span.font-16.txt-upper С 9.00 - 21.00 ВЫХОДНОЙ: СБ-ВС
 			.our-contacts-map
-		
+				.map
+					script(type='text/javascript' charset='utf-8' async src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7e93e98942ef8084c804e463fb906987d7d37ba6dd3ad9539369a39e6822c25b&width=100%&height=100%&lang=ru_RU&scroll=false')
