@@ -1,57 +1,57 @@
-extends ../layouts/layout.pug
-
-block content
-	section.portfolio
-		.container.gap-40
-			.header-block
-				.h2 Сданные объекты
-			.portfolio-cards.three-columns
-				a(href="single-object.html").portfolio-card
+//ALL OBJECTS
+section.single-object
+	.container
+		ul.breadcrumbs
+			li.breadcrumb-item
+				a(href="index.html") Главная
+			li.breadcrumb-item
+				a(href="all-objects.html") Наши объекты
+			li.breadcrumb-item
+				span  Асфальтирование малых объемов
+		.single-object-gallery.gap-40
+			.three-columns
+				a(href="./img/pr1.webp" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr1.webp', srcset='./img/pr1@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Асфальтирование малых объемов
-				a(href="single-object.html").portfolio-card
+					
+				a(href="/img/pr2.webp" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr2.webp', srcset='./img/pr2@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Въезд на территорию предприятия
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr9.webp" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr9.webp', srcset='./img/pr9@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Парковки и стоянки
 				
-				a(href="single-object.html").portfolio-card
+				a(href="./img/pr3.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr3.webp', srcset='./img/pr3@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Тротуары
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr4.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr4.webp', srcset='./img/pr4@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Асфальтирование территории
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr5.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr5.webp', srcset='./img/pr5@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Асфальтирование малых объемов
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr6.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr6.webp', srcset='./img/pr6@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Скверы, парки,  благоустройство территории
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr7.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr7.webp', srcset='./img/pr7@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Дороги и проезды
-				a(href="single-object.html").portfolio-card
+					
+				a(href="./img/pr8.webp.html" data-fancybox="single-object").portfolio-card
 					.portfolio-card__img
 						picture
 							img(src='./img/pr8.webp', srcset='./img/pr8@2x.webp 2x' width='479' height='360' loading='lazy' alt='img')
-					.bold-18 Бетонные работы
-
-block variables
-	-var title = "Наши работы";
+					

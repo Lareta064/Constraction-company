@@ -50,6 +50,7 @@
 	&:hover .portfolio-card__img:after{transform: translateY(0);}
 	
 }
+.portfolio-card[data-fancybox="single-object"] .portfolio-card__img:after{display: none;}
 .my-fancybox-counter {
   position: absolute;
   left: 50%;
