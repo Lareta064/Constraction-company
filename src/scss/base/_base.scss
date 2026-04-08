@@ -157,6 +157,10 @@ input::placeholder, textarea::placeholder{
 		padding-left: remy(20);
 		padding-right: remy(20);
 	}
+	@media (max-width: 424px) {
+		padding-left: remy(10);
+		padding-right: remy(10);
+	}
 }
 .container-narrow{
 	max-width: remy(988);
@@ -248,4 +252,19 @@ input::placeholder, textarea::placeholder{
     margin-bottom: remy(40);
 	 gap: remy(10);
   }
+}
+.page-404-content{
+	text-align: center;
+	max-width: remy(1000);
+	margin-left: auto;
+	margin-right: auto;
+	
+	.big-title{
+		font-size: remy(170);
+		font-weight: 700;
+	}
+	.link-underline{color: var(--accent1);}
+	@media (max-width: 1023px) {
+	.big-title{font-size: remy(80);}
+	}
 }

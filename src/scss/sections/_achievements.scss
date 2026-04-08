@@ -29,6 +29,9 @@
 	@media (max-width: 1439px) {
 	   padding: remy(20);
 	}
+	@media (max-width: 424px) {
+	  padding: remy(10);
+	}
 }
 .achiev-card .brand-logo{display: flex; justify-content: center;}
 .achiev-card .icon-text{justify-content: center;}

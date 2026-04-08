@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-content
+		include ../sections/_header.pug
+		main.inner-page
+			.container
+				.page-404-content
+					h1.big-title 404
+					p.h1 Такой страницы не существует, но вы можете вернуться на #[a.link-underline(href="index.html") Главную]
+			
+		include ../sections/_footer.pug
+			
+block variables
+	-var title = "Home";

@@ -6,6 +6,7 @@
 	background-repeat: no-repeat;
 	display: flex;
 	.hero-title >*+*{margin-top: remy(20);}
+	.hero-title *{color: white;}
 	.h1{
 		color: var(--promo-title);
 		@media (max-width: 1699px) {

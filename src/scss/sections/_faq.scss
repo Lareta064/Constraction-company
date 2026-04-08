@@ -4,15 +4,12 @@
 .acordion-wrapper .acordion-button{
 	display: flex;
 	padding: remy(30);
-	
-	
 	display: flex;
 	align-items: center;
 	column-gap:remy(10);
+	cursor:pointer;
 	@media (max-width: 1199px) {
 	padding: remy(20);
-	
-	
 	}
 }
 .acordion-item{
@@ -61,25 +58,10 @@
 	.acordion-item__title, .acordion-item__title svg{color: var(--accent1);}
 	.acordion-item__icon{transform: rotate(180deg);}
 }
-.acordion-wrapper .acordion-item +.acordion-item{margin-top: remy(10);}
-.acordion-wrapper .acordion-button{
-	display: flex;
-	padding: remy(30);
-	
-	
-	display: flex;
-	align-items: center;
-	column-gap:remy(10);
-	@media (max-width: 1199px) {
-	  padding: remy(20);
-	}
-}
+
 /*JS DROP*/
 .js-drop  .js-drop-body{
 	max-height:0;
 	overflow: hidden;
 	transition: height .3s, max-height 0.3s;
-}
-.js-drop-button{
-	
 }

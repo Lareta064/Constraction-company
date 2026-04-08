@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		},
 		pagination: {
         el: ".review-documents .swiper-pagination",
+         clickable: true,
       },
 	  breakpoints: {
         640: {
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	let partnersReview = new Swiper(".review-partners", {
 		slidesPerView: 'auto',
 		speed: 1000,
+    slidesOffsetBefore: 20,
 		spaceBetween: 10,
 		navigation: {
 			nextEl: ".review-partners-next",
@@ -105,16 +107,21 @@ document.addEventListener('DOMContentLoaded', function() {
 		},
 		pagination: {
         el: ".review-partners .swiper-pagination",
+         clickable: true,
       },
 	  breakpoints: {
        
         1024: {
-          
+           slidesOffsetBefore: 30,
           spaceBetween:20,
         },
 		
-		1440: {
-          
+		  1200: {
+            slidesOffsetBefore: 70,
+           spaceBetween:30,
+        },
+        1700: {
+            slidesOffsetBefore: 190,
            spaceBetween:30,
         },
       },
@@ -130,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		},
 		pagination: {
         el: ".gallery-swiper .swiper-pagination",
+        clickable: true,
       },
      breakpoints: {
         1024: {
@@ -187,25 +195,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const resultFancybox = document.querySelector('[data-fancybox="team-video"]');
   const videoFancybox = document.querySelector('[data-fancybox="video-gallery"]');
   const reviewFancybox = document.querySelector('[data-fancybox="review"]');
+
  
- if(galleryFancybox){
-   Fancybox.bind('[data-fancybox="gallery"]', {
-     Thumbs: false,
- 
-     Toolbar: {
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: false,
+    Toolbar: {
        display: {
-       left: [],
-       middle: [],
-       right: ["close"],
-       },
-     },
- 
-     on: {
-       ready: (fancybox) => updateCounter(fancybox),
-       "Carousel.change": (fancybox) => updateCounter(fancybox),
-     },
-   });
- }
+        right: ["close"],
+       }
+    }
+});
+
   if(teamFancybox){
 	Fancybox.bind('[data-fancybox="video-gallery"]', {
 	  Thumbs: false,
@@ -242,6 +243,7 @@ if(reviewFancybox){
     }
 	});
  }
+
 Fancybox.bind('[data-fancybox="form-popup"]', {
   Thumbs: false,
   dragToClose: false,
@@ -298,20 +300,7 @@ document.addEventListener("click", (e) => {
     Fancybox.close();
   }
 });
-	function updateCounter(fancybox) {
-      let counter = fancybox.container.querySelector(".my-fancybox-counter");
 
-      if (!counter) {
-        counter = document.createElement("div");
-        counter.className = "my-fancybox-counter";
-        fancybox.container.appendChild(counter);
-      }
-
-      const index = fancybox.getSlide()?.index ?? 0;
-      const total = fancybox.Carousel?.slides?.length ?? 0;
-
-      counter.textContent = `${index + 1} / ${total}`;
-      }
 
     /*sidebar movile click */
     const dataBtns = document.querySelectorAll('[data-btn]');

@@ -97,6 +97,7 @@
 	gap: remy(30);
 	@media (max-width: 1199px) {
 	 grid-template-columns: 1fr 1fr;
+	 gap: remy(20);
 	}
 	@media (max-width: 767px) {
 	  grid-template-columns: 1fr;
@@ -118,6 +119,12 @@
 }
 .two-columns{
 	grid-template-columns: repeat(2, 1fr);
+}
+.two-columns-mobile{
+	@media (max-width: 767px) {
+	 grid-template-columns: repeat(2, 1fr)!important;
+	 gap: remy(10)  remy(10)!important;
+	}
 }
 .gap-40{gap: remy(40);}
 .gap-10,.rows-gap-10,.gap-20,

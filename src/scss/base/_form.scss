@@ -53,6 +53,10 @@ input[type="search"]::-webkit-search-cancel-button {
 		flex-direction: column;
 		gap: remy(10);
 	}
+	@media (max-width:424px) {
+		width: 100%!important;
+		max-width: remy(350)!important;
+	}
 	
 }
 

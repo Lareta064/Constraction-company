@@ -12,8 +12,9 @@ column-gap:remy(20);
 .menu-item{
 	padding-top: 10px;
 	padding-bottom: 10px;
+	.svg-carret-down{color: var(--primary);}
 }
-.menu-item .menu-submenu {}
+
 .menu-item.has-submenu{position: relative;}
 .menu-link{
 	display: flex;
@@ -40,6 +41,8 @@ column-gap:remy(20);
 	top: 100%;
 	left: 0;
 	width: remy(320);
+	min-width: remy(300);
+	width: fit-content;
 	box-shadow: 4px 4px 50px 0 rgba(0, 0, 0, 0.05);
 	background: var(--white);
 	transform:translateY(0);
@@ -64,7 +67,7 @@ column-gap:remy(20);
 	visibility 0s;
 }
 .menu-item.has-submenu:hover .menu-link{color: var(--accent1);}
-.menu-item.has-submenu:hover .menu-link svg{transform: rotate(180deg);}
+.menu-item.has-submenu:hover .menu-link svg.svg-carret-down{transform: rotate(180deg);color: var(--accent1);}
 .menu-submenu{
 	padding: 0;
 	margin: 0;
@@ -93,6 +96,7 @@ column-gap:remy(20);
 		padding-block: remy(15);
 		border-bottom: 1px solid var(--secondary2);
 		border-top: 1px solid var(--secondary2);
+		background: var(--secondary2);
 	}
 	.sub-submenu-item a{
 		padding: remy(5) remy(30);
@@ -103,8 +107,9 @@ column-gap:remy(20);
 	.sub-submenu-item +.sub-submenu-item{margin-top: remy(10);}
 }
 .submenu-item.js-drop-item-active .submenu-link{padding-bottom: 20px; color: var(--accent1);}
-.submenu-item.js-drop-item-active svg{
+.submenu-item.js-drop-item-active svg.svg-carret-down{
 	transform: rotate(180deg);
+	color:var(--accent1);
 }
 .submenu-item.js-drop-item-active + .submenu-item .submenu-link{padding-top: 20px;}
 
@@ -112,10 +117,12 @@ column-gap:remy(20);
 	position: relative;
 	display: none; 
 	flex-shrink: 0;
+	.menu-submenu-wrapper{
+		width: fit-content;
+		min-width: 180px;
+	}
 }
-.menu-more-list {
-	width: remy(220);
-}
+
 .menu-more-btn {
 	display: flex;
 	align-items: center;

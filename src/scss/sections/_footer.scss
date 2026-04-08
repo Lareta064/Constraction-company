@@ -142,9 +142,12 @@ a.contacts-item{
 	margin-left: auto;
 	@media (max-width: 1023px) {
 	    margin-left: 0;
+		column-gap: remy(30);
 	}
-	@media (max-width: 1023px) {
-	padding-block: remy(20);
+	@media (max-width: 767px) {
+	  padding-block: remy(20);
+	  flex-wrap: wrap;
+	  row-gap: remy(10);
 	}
 	.primary-link{
 		color: var(--white);

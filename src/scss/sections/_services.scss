@@ -20,7 +20,7 @@
 	}
 }
 .service-card{
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
 	
 	&__img{
@@ -29,6 +29,7 @@
 		aspect-ratio: 36/40;
 		object-fit: cover;
 		flex-shrink: 0;
+		border-radius: remy(12) 0 0 remy(12);
 		overflow: hidden;
 		img{
 			width: 100%;
@@ -54,6 +55,7 @@
 			width: 100%;
 			max-width: unset;
 			aspect-ratio: 388/350;
+			border-radius: remy(12) remy(12) 0 0;
 		}
 	}
 }
