@@ -32,7 +32,7 @@
 .btn-outline{
 	border: 1px solid var(--btn-primary);
     color: var(--btn-primary);
-	background:#fff;
+	background:transparent;
 	svg{color: var(--btn-primary);}
 	&:hover{
 		color: var(--btn-primary-text);
@@ -74,7 +74,7 @@
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='20' viewBox='0 0 17 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.3797 8.66756C17.0998 9.08333 17.0998 10.1227 16.3797 10.5385L1.62027 19.0599C0.90015 19.4756 0 18.9559 0 18.1244L0 1.08165C0 0.250127 0.90015 -0.269575 1.62027 0.146187L16.3797 8.66756Z' fill='white' /%3e%3c/svg%3e");
 	background-size: remy(17);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 55% center;
 	transition: .3S;
 	position: absolute;
 	top: 50%;

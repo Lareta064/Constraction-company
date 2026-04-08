@@ -64,7 +64,7 @@
 		display: flex;
 		flex-direction: column;
 		gap:remy(20);
-	   .h2.visible-mobile{display: block; margin-bottom: 20px;}
+	   .h2.visible-mobile{display: block;}
 	   .image-back, .image-front{
 		 width: 100%;
 		 img{aspect-ratio: 388/242;}
@@ -100,6 +100,7 @@
 	padding: remy(30);
 	background-color: var(--white-bg);
 	display: flex;
+	align-items:center;
 	column-gap: remy(20);
 	.marker-strip-icon{
 		width: remy(32);
@@ -110,6 +111,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	@media (max-width: 767px) {
+	 padding: remy(20);
+	 .bold-20{font-size: remy(16);}
 	}
 
 }

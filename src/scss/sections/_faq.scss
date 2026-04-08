@@ -31,7 +31,7 @@
 	svg{
 		width:remy(24);
 		height: remy(24);
-		
+		color: var(--primary);
 	}
 }
 .acordion-wrapper  .acordion-body{
@@ -56,7 +56,7 @@
 	border: 1px solid var(--accent1);
 	.acordion-button{padding-bottom: 0;}
 	.acordion-item__title, .acordion-item__title svg{color: var(--accent1);}
-	.acordion-item__icon{transform: rotate(180deg);}
+	.acordion-item__icon{transform: rotate(180deg);svg{color: var(--accent1);} }
 }
 
 /*JS DROP*/

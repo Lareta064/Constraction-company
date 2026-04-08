@@ -59,6 +59,13 @@
 		}
 	}
 }
+ul.medi-18{
+	 li.icon-text{column-gap: remy(10)}
+	@media (max-width: 767px) {
+	  font-size: remy(16);
+	  li{align-items:flex-start; }
+	}
+}
 .transform-card{
 	display: flex;
 	flex-direction: column;
