@@ -65,3 +65,7 @@
 	overflow: hidden;
 	transition: height .3s, max-height 0.3s;
 }
+.js-drop-item{
+	.svg-carret-down{color: var(--primary);}
+}
+.js-drop-item.js-drop-item-active{.svg-carret-down{color: var(--accent1);}}

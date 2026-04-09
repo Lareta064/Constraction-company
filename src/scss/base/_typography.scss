@@ -282,12 +282,19 @@
 .primary-section, .accent-section{
 	border-radius: remy(12);
 	padding-inline: calc((100% - remy(1240)) / 2);
+	padding-inline:remy(120);
 	.h2{color: var(--white);}
 	@media (max-width: 1439px) {
 	 padding-inline:6.5em;
 	}
 	@media (max-width: 1279px) {
-	 padding-inline:remy(20);
+	 padding-inline:remy(80);
+	}
+	@media (max-width: 1023px) {
+	 padding-inline:remy(50);
+	}
+	@media (max-width: 767px) {
+	padding-inline:remy(20);
 	}
 	
 }

@@ -12,6 +12,9 @@
 			flex-direction: column;
 			gap: remy(10);
 		}
+		@media (max-width: 1364px) {
+		  width: remy(400);
+		}
 		@media (max-width: 1199px) {
 		  width: remy(350);
 		}
