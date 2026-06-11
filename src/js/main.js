@@ -195,7 +195,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const resultFancybox = document.querySelector('[data-fancybox="team-video"]');
   const videoFancybox = document.querySelector('[data-fancybox="video-gallery"]');
   const reviewFancybox = document.querySelector('[data-fancybox="review"]');
-
+  const promoFancybox = document.querySelector('[data-fancybox="big-block-video"]');
+  if( promoFancybox){
+      Fancybox.bind('[data-fancybox="big-block-video"]', {
+          Thumbs: false,
+          Toolbar: {
+            display: {
+              right: ["close"],
+            }
+          }
+      });
+      
+  }
  
 
 Fancybox.bind('[data-fancybox="gallery"]', {
