@@ -362,7 +362,7 @@ document.addEventListener("click", (e) => {
     body.style.maxHeight = body.scrollHeight + 'px';
   }
 
-  function closeItem(item){
+  function closeItem(item){ // наблюдаем все body внутри враппера
     const body = getBody(item);
     if (!body) return;
     item.classList.remove('acordion-item--active');
@@ -517,7 +517,11 @@ document.addEventListener("click", (e) => {
     const moreItem = menuList.querySelector('.menu-item--more');
     const moreList = moreItem?.querySelector('.menu-more-list');
 
-    if (!moreItem || !moreList) return;
+    if (!moreItem || !moreList) {
+      // нечего сворачивать — сразу показываем меню
+      menuList.classList.add('is-measured');
+      return;
+    }
 
     function getRegularItems() {
       return [...menuList.children].filter(
@@ -627,6 +631,8 @@ document.addEventListener("click", (e) => {
     }
 
     updateMenu();
+    // первый расчёт переполнения выполнен — показываем меню без артефакта
+    menuList.classList.add('is-measured');
   }
 
   document.addEventListener('DOMContentLoaded', () => {

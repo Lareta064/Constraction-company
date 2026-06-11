@@ -9,6 +9,10 @@ display: flex;
 // justify-content: center;
 // width: 100%;
 column-gap:remy(20);
+// до первого расчёта переполнения скрываем ряд, чтобы лишние пункты
+// не мелькали поверх .header-bottom-right при загрузке/перезагрузке
+visibility: hidden;
+&.is-measured{ visibility: visible; }
 .menu-item{
 	padding-top: 10px;
 	padding-bottom: 10px;
